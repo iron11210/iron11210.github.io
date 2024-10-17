@@ -10,13 +10,86 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 03 Oct 2024 10:25:59 +1000</pubDate>
-        <lastBuildDate>Thu, 03 Oct 2024 10:25:59 +1000</lastBuildDate>
+        <pubDate>Thu, 17 Oct 2024 14:03:19 +1100</pubDate>
+        <lastBuildDate>Thu, 17 Oct 2024 14:03:19 +1100</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2024/10/03/database/lec8%20Schema%20Refinement%20and%20Normalisation/</guid>
+            <guid isPermalink="true">http://example.com/2024/10/17/computer/ue/ue/hello-world/</guid>
+            <title>Hello World</title>
+            <link>http://example.com/2024/10/17/computer/ue/ue/hello-world/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="ue" scheme="http://example.com/categories/game-engine/ue/" />
+            <pubDate>Thu, 17 Oct 2024 14:03:19 +1100</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I LOVE YOU&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/17/computer/ue/hello-world/</guid>
+            <title>Hello World</title>
+            <link>http://example.com/2024/10/17/computer/ue/hello-world/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="ue" scheme="http://example.com/categories/game-engine/ue/" />
+            <pubDate>Thu, 17 Oct 2024 14:01:39 +1100</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I LOVE YOU&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/17/game-engine/unity/hello-world/</guid>
+            <title>Hello World</title>
+            <link>http://example.com/2024/10/17/game-engine/unity/hello-world/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
+            <pubDate>Thu, 17 Oct 2024 13:41:03 +1100</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I LOVE YOU&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/03/computer/database/lec8%20Schema%20Refinement%20and%20Normalisation/</guid>
             <title>lec_8 Schema Refinement and Normalisation</title>
-            <link>http://example.com/2024/10/03/database/lec8%20Schema%20Refinement%20and%20Normalisation/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
+            <link>http://example.com/2024/10/03/computer/database/lec8%20Schema%20Refinement%20and%20Normalisation/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
             <pubDate>Thu, 03 Oct 2024 10:25:59 +1000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;冗余和异常redundancy-and-anomalies&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冗余和异常redundancy-and-anomalies&#34;&gt;#&lt;/a&gt; 冗余和异常（Redundancy and Anomalies）&lt;/h2&gt;
 &lt;h3 id=&#34;1-冗余的定义与问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-冗余的定义与问题&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;冗余的定义与问题&lt;/strong&gt;&lt;/h3&gt;
@@ -195,10 +268,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/30/database/lec7%20python%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/30/computer/database/lec7%20python%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
             <title>lec_7 Python连接数据库</title>
-            <link>http://example.com/2024/09/30/database/lec7%20python%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
+            <link>http://example.com/2024/09/30/computer/database/lec7%20python%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
             <pubDate>Mon, 30 Sep 2024 16:12:43 +1000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;1使用python连接数据库并进行操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1使用python连接数据库并进行操作&#34;&gt;#&lt;/a&gt; 1. 使用 python 连接数据库并进行操作&lt;/h2&gt;
 &lt;ol&gt;
@@ -274,10 +348,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/29/database/lec_6%20Advanced%20SQL/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/29/computer/database/lec_6%20Advanced%20SQL/</guid>
             <title>lec_6 Advanced SQL</title>
-            <link>http://example.com/2024/09/29/database/lec_6%20Advanced%20SQL/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
+            <link>http://example.com/2024/09/29/computer/database/lec_6%20Advanced%20SQL/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
             <pubDate>Sun, 29 Sep 2024 16:55:39 +1000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;嵌套查询nested-queries&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#嵌套查询nested-queries&#34;&gt;#&lt;/a&gt; 嵌套查询（Nested Queries）&lt;/h2&gt;
 &lt;h3 id=&#34;1-嵌套查询的定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-嵌套查询的定义&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;嵌套查询的定义&lt;/strong&gt;&lt;/h3&gt;
@@ -774,10 +849,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/19/networks/network_lec_6/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/19/computer/networks/network_lec_6/</guid>
             <title>lecture_6Network Layer 3</title>
-            <link>http://example.com/2024/09/19/networks/network_lec_6/</link>
-            <category term="计算机网络" scheme="http://example.com/categories/networks/" />
+            <link>http://example.com/2024/09/19/computer/networks/network_lec_6/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="计算机网络" scheme="http://example.com/categories/computer/networks/" />
             <pubDate>Thu, 19 Sep 2024 20:01:35 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;链路状态ls和距离向量dv算法介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链路状态ls和距离向量dv算法介绍&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;链路状态（LS）和距离向量（DV）算法介绍&lt;/span&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;1-链路状态算法link-state-ls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-链路状态算法link-state-ls&#34;&gt;#&lt;/a&gt; 1. 链路状态算法（Link State, LS）&lt;/h2&gt;
@@ -863,10 +939,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/ue/hello-world/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/17/game-engine/ue/hello-world/</guid>
             <title>Hello World</title>
-            <link>http://example.com/2024/09/17/ue/hello-world/</link>
-            <category term="ue" scheme="http://example.com/categories/ue/" />
+            <link>http://example.com/2024/09/17/game-engine/ue/hello-world/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="ue" scheme="http://example.com/categories/game-engine/ue/" />
             <pubDate>Tue, 17 Sep 2024 14:09:35 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
@@ -894,10 +971,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/networks/hello-world/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/17/computer/networks/hello-world/</guid>
             <title>Hello World</title>
-            <link>http://example.com/2024/09/17/networks/hello-world/</link>
-            <category term="计算机网络" scheme="http://example.com/categories/networks/" />
+            <link>http://example.com/2024/09/17/computer/networks/hello-world/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="计算机网络" scheme="http://example.com/categories/computer/networks/" />
             <pubDate>Tue, 17 Sep 2024 01:34:21 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
@@ -917,10 +995,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/it-projectManage/hello-world/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/17/computer/it-projectManage/hello-world/</guid>
             <title>Hello World</title>
-            <link>http://example.com/2024/09/17/it-projectManage/hello-world/</link>
-            <category term="IT项目管理" scheme="http://example.com/categories/it-projectManage/" />
+            <link>http://example.com/2024/09/17/computer/it-projectManage/hello-world/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="IT项目管理" scheme="http://example.com/categories/computer/it-projectManage/" />
             <pubDate>Tue, 17 Sep 2024 00:15:39 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
@@ -940,378 +1019,22 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/16/database/learn-test/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/16/computer/database/learn-test/</guid>
             <title>introduction</title>
-            <link>http://example.com/2024/09/16/database/learn-test/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
+            <link>http://example.com/2024/09/16/computer/database/learn-test/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
             <pubDate>Mon, 16 Sep 2024 23:03:36 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;此分类主要整理了悉尼大学 9120 数据库的知识，内容包含 E-R 图，RM 图，以及 postgresql 的内容。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/09/16/database/lec_4%20%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%8Esql/</guid>
-            <title>lec_4 关系代数与sql</title>
-            <link>http://example.com/2024/09/16/database/lec_4%20%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%8Esql/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
-            <pubDate>Mon, 16 Sep 2024 23:03:36 +1000</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;关系代数与sql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关系代数与sql&#34;&gt;#&lt;/a&gt; 关系代数与 sql&lt;/h1&gt;
-&lt;h2 id=&#34;关系代数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关系代数&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;关系代数&lt;/span&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;关系代数简介&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关系代数（Relational Algebra, RA）&lt;/strong&gt; 是针对关系模型的操作语言。&lt;/li&gt;
-&lt;li&gt;关系代数由一组操作符组成，可以对关系（表）执行操作，描述如何一步一步计算出所需结果。&lt;/li&gt;
-&lt;li&gt;关系代数是命令式的，描述了查询的过程，而不是结果的约束。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;关系代数基本操作符&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;选择 (Selection, σ)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;选择操作从一个关系（表）中挑选出符合某个条件的元组（行）。&lt;/li&gt;
-&lt;li&gt;形式：σ_condition (R)&lt;/li&gt;
-&lt;li&gt;示例：σ_country=&#39;AUS&#39;(Student) 会返回所有国家为 “澳大利亚” 的学生。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;投影 (Projection, π)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;投影操作从一个关系中选择特定的属性（列），并删除重复的元组。&lt;/li&gt;
-&lt;li&gt;形式：π_attributes (R)&lt;/li&gt;
-&lt;li&gt;示例：π_name, country (Student) 返回学生表中的姓名和国家列，去除重复值。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;笛卡尔积 (Cross Product, ×)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;笛卡尔积操作将两个关系的所有元组进行组合，形成新的关系，结果的每一行都是两个关系中元组的所有可能组合。比如学生表有 2 条数据，老师表有 3 条数据，组成的新表就有 6 条数据。&lt;/li&gt;
-&lt;li&gt;形式：R × S&lt;/li&gt;
-&lt;li&gt;示例：Student × Enrolled 将两个表中的每一个元组组合在一起。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;联合 (Union, ∪)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;联合操作返回两个关系中的所有元组，自动去除重复的行。&lt;/li&gt;
-&lt;li&gt;形式：R ∪ S&lt;/li&gt;
-&lt;li&gt;示例：π_sid (Student) ∪ π_sid (Enrolled) 返回在学生和选课表中出现的所有学生 ID。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;交集 (Intersection, ∩)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;交集操作返回在两个关系中都存在的元组。&lt;/li&gt;
-&lt;li&gt;形式：R ∩ S&lt;/li&gt;
-&lt;li&gt;示例：π_sid (Student) ∩ π_sid (Enrolled) 返回同时出现在学生表和选课表中的学生 ID。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;差集 (Difference, −)&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;差集操作返回在第一个关系中存在但在第二个关系中不存在的元组。&lt;/li&gt;
-&lt;li&gt;形式：R − S&lt;/li&gt;
-&lt;li&gt;示例：π_sid (Student) − π_sid (Enrolled) 返回只在学生表中存在而没有选课的学生 ID。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;连接操作&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;连接操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连接操作&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;连接操作&lt;/span&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;条件连接 (Theta Join, ⋈ₛ)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：条件连接是基于给定的条件，将两个关系的笛卡尔积中的行进行筛选。该条件可以是任意的布尔表达式（例如  &lt;code&gt;=&lt;/code&gt; 、 &lt;code&gt;&amp;gt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;&lt;/code&gt;  等比较操作符）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈ₛ S&lt;/code&gt; ，其中  &lt;code&gt;ₛ&lt;/code&gt;  是连接条件。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：假设有两个表  &lt;code&gt;Student&lt;/code&gt;  和  &lt;code&gt;Enrolled&lt;/code&gt; ，我们希望查找学生和他们所选的课程：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;表  &lt;code&gt;Student&lt;/code&gt; :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;sid&lt;/th&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;country&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;lan&lt;/td&gt;
-&lt;td&gt;AUS&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;Ha&lt;/td&gt;
-&lt;td&gt;ROK&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre&gt;&lt;code&gt;- 表 `Enrolled`:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;sid&lt;/th&gt;
-&lt;th&gt;uos_code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre&gt;&lt;code&gt;查询学生与他们所选课程，可以使用 `sid` 作为连接条件：
-
-- `Student ⋈_&amp;#123;Student.sid = Enrolled.sid&amp;#125; Enrolled`:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;sid&lt;/th&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;country&lt;/th&gt;
-&lt;th&gt;uos_code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;lan&lt;/td&gt;
-&lt;td&gt;AUS&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;Ha&lt;/td&gt;
-&lt;td&gt;ROK&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;通过这个操作，我们得到了两个表中  &lt;code&gt;sid&lt;/code&gt;  匹配的行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;strong&gt;自然连接 (Natural Join, ⋈)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：自然连接是一种特殊的等值连接，它自动基于两个关系中&lt;strong&gt;具有相同名称&lt;/strong&gt;且&lt;strong&gt;值相等&lt;/strong&gt;的属性进行连接，且在结果中只保留一个重复的属性列。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈ S&lt;/code&gt; ，连接条件是所有同名属性相等。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：考虑前面的  &lt;code&gt;Student&lt;/code&gt;  和  &lt;code&gt;Enrolled&lt;/code&gt;  表，假设我们要进行自然连接：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Student ⋈ Enrolled&lt;/code&gt; :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;sid&lt;/th&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;country&lt;/th&gt;
-&lt;th&gt;uos_code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;lan&lt;/td&gt;
-&lt;td&gt;AUS&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;Ha&lt;/td&gt;
-&lt;td&gt;ROK&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;在自然连接中， &lt;code&gt;sid&lt;/code&gt;  是两个表中共有的属性，连接后只保留一列  &lt;code&gt;sid&lt;/code&gt; 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;strong&gt;等值连接 (Equi-Join)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：等值连接是条件连接的一种特例，连接条件只包含相等比较（ &lt;code&gt;=&lt;/code&gt; ）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈_&amp;#123;A = B&amp;#125; S&lt;/code&gt; ，其中  &lt;code&gt;A&lt;/code&gt;  和  &lt;code&gt;B&lt;/code&gt;  是两个表中的属性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;与自然连接的区别&lt;/strong&gt;：等值连接会保留连接条件中的重复属性，而自然连接则去掉重复列。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;： &lt;code&gt;Student ⋈_&amp;#123;Student.sid = Enrolled.sid&amp;#125; Enrolled&lt;/code&gt; ，结果中会保留两个  &lt;code&gt;sid&lt;/code&gt;  列。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;strong&gt;外连接 (Outer Join)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;外连接允许在结果中包含没有匹配行的元组，并填充相应部分为  &lt;code&gt;NULL&lt;/code&gt; 。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;左外连接 (Left Outer Join)&lt;/strong&gt;：返回左表中的所有元组，即使右表中没有匹配的行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R LEFT OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;： &lt;code&gt;Student LEFT OUTER JOIN Enrolled&lt;/code&gt;  会返回学生表中的所有行，即使有些学生没有选课，未匹配的部分用  &lt;code&gt;NULL&lt;/code&gt;  填充：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;sid&lt;/th&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;country&lt;/th&gt;
-&lt;th&gt;uos_code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;lan&lt;/td&gt;
-&lt;td&gt;AUS&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;HA&lt;/td&gt;
-&lt;td&gt;ROK&lt;/td&gt;
-&lt;td&gt;COMP5318&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1003&lt;/td&gt;
-&lt;td&gt;Grant&lt;/td&gt;
-&lt;td&gt;AUS&lt;/td&gt;
-&lt;td&gt;NULL&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;右外连接 (Right Outer Join)&lt;/strong&gt;：返回右表中的所有元组，即使左表中没有匹配的行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R RIGHT OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;全外连接 (Full Outer Join)&lt;/strong&gt;：返回两个表中的所有元组，包括没有匹配的行，并将未匹配的部分用  &lt;code&gt;NULL&lt;/code&gt;  填充。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R FULL OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;sql简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql简介&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;SQL 简介&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;在 SQL 中，集合操作用于对两个查询结果集进行运算，类似于关系代数中的集合运算。常见的 SQL 集合操作包括  &lt;code&gt;UNION&lt;/code&gt; 、 &lt;code&gt;INTERSECT&lt;/code&gt;  和  &lt;code&gt;EXCEPT&lt;/code&gt; 。这些操作用于合并、比较两个查询的结果集，并遵循集合的基本规则，如去除重复数据。每个操作都需要两个结果集具有&lt;strong&gt;相同数量的列&lt;/strong&gt;，且相应列的数据类型必须兼容。&lt;/p&gt;
-&lt;h3 id=&#34;1-union并集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-union并集&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;UNION&lt;/strong&gt;（并集）&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;UNION&lt;/code&gt;  操作返回两个查询结果的并集，也就是说，它会包含两个结果集中所有的行，且自动去除重复的行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;br&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;该查询将返回  &lt;code&gt;Students&lt;/code&gt;  表和  &lt;code&gt;Teachers&lt;/code&gt;  表中的所有不同的名字（去重）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;自动去除重复行。&lt;/li&gt;
-&lt;li&gt;可以使用  &lt;code&gt;UNION ALL&lt;/code&gt;  来保留重复行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;br&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;ALL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;UNION ALL&lt;/code&gt;  将返回所有行，包括重复的行。&lt;/p&gt;
-&lt;h3 id=&#34;2-intersect交集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-intersect交集&#34;&gt;#&lt;/a&gt; 2. **INTERSECT（** 交集）&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;INTERSECT&lt;/code&gt;  操作返回两个查询结果的交集，即只返回在两个查询结果中都存在的行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INTERSECT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;示例&lt;br&gt;
- &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INTERSECT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;该查询将返回既是  &lt;code&gt;Students&lt;/code&gt;  表又是  &lt;code&gt;Teachers&lt;/code&gt;  表中的名字（即两个表中都存在的名字）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;只返回两个结果集中都出现的行。&lt;/li&gt;
-&lt;li&gt;自动去除重复行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-except差集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-except差集&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;EXCEPT&lt;/strong&gt;（差集）&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;EXCEPT&lt;/code&gt;  操作返回在第一个查询结果中存在但在第二个查询结果中不存在的行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;EXCEPT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;示例&lt;br&gt;
- &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;EXCEPT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;该查询将返回所有只存在于  &lt;code&gt;Students&lt;/code&gt;  表中但不在  &lt;code&gt;Teachers&lt;/code&gt;  表中的名字。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;返回只出现在第一个结果集中的行。&lt;/li&gt;
-&lt;li&gt;自动去除重复行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4-union-intersect-和-except-的规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-union-intersect-和-except-的规则&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;UNION、INTERSECT 和 EXCEPT 的规则&lt;/strong&gt;：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;列数必须相同&lt;/strong&gt;：在两个查询中， &lt;code&gt;SELECT&lt;/code&gt;  子句中的列数量必须一致。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据类型必须兼容&lt;/strong&gt;：相应列的数据类型必须相同或兼容。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;去除重复行&lt;/strong&gt;：默认情况下， &lt;code&gt;UNION&lt;/code&gt; 、 &lt;code&gt;INTERSECT&lt;/code&gt;  和  &lt;code&gt;EXCEPT&lt;/code&gt;  都会去除重复的行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用 ALL 保留重复行&lt;/strong&gt;：如果希望保留重复行，可以使用  &lt;code&gt;UNION ALL&lt;/code&gt; ，但  &lt;code&gt;INTERSECT ALL&lt;/code&gt;  和  &lt;code&gt;EXCEPT ALL&lt;/code&gt;  在部分 SQL 实现中并不支持。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt; &lt;code&gt;UNION&lt;/code&gt; &lt;/strong&gt; 返回两个查询结果集的并集，去除重复行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt; &lt;code&gt;INTERSECT&lt;/code&gt; &lt;/strong&gt; 返回两个查询结果集的交集，即共同存在的行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt; &lt;code&gt;EXCEPT&lt;/code&gt; &lt;/strong&gt; 返回第一个结果集中有但第二个结果集中没有的行。&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2024/09/16/database/lec_5%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BA%A6%E6%9D%9F/</guid>
+            <guid isPermalink="true">http://example.com/2024/09/16/computer/database/lec_5%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BA%A6%E6%9D%9F/</guid>
             <title>lec_5 数据库约束</title>
-            <link>http://example.com/2024/09/16/database/lec_5%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BA%A6%E6%9D%9F/</link>
-            <category term="数据库" scheme="http://example.com/categories/database/" />
+            <link>http://example.com/2024/09/16/computer/database/lec_5%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BA%A6%E6%9D%9F/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
             <pubDate>Mon, 16 Sep 2024 23:03:36 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数据库约束database-constriants&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库约束database-constriants&#34;&gt;#&lt;/a&gt; 数据库约束（Database constriants）&lt;/h1&gt;
 &lt;h2 id=&#34;完整性约束-intergral-constraint&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#完整性约束-intergral-constraint&#34;&gt;#&lt;/a&gt; 完整性约束 (Intergral constraint)&lt;/h2&gt;
@@ -1659,6 +1382,366 @@
 &lt;li&gt;&lt;strong&gt;拒绝操作&lt;/strong&gt;：直接阻止违反约束的插入、更新或删除操作。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;回滚事务&lt;/strong&gt;：如果事务中的任何操作违反约束，整个事务都会被撤销。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;执行维护操作&lt;/strong&gt;：通过设置级联操作或将外键字段设置为  &lt;code&gt;NULL&lt;/code&gt;  或默认值，自动维护数据库的完整性。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/09/16/computer/database/lec_4%20%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%8Esql/</guid>
+            <title>lec_4 关系代数与sql</title>
+            <link>http://example.com/2024/09/16/computer/database/lec_4%20%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%8Esql/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
+            <pubDate>Mon, 16 Sep 2024 23:03:36 +1000</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;关系代数与sql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关系代数与sql&#34;&gt;#&lt;/a&gt; 关系代数与 sql&lt;/h1&gt;
+&lt;h2 id=&#34;关系代数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关系代数&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;关系代数&lt;/span&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;关系代数简介&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关系代数（Relational Algebra, RA）&lt;/strong&gt; 是针对关系模型的操作语言。&lt;/li&gt;
+&lt;li&gt;关系代数由一组操作符组成，可以对关系（表）执行操作，描述如何一步一步计算出所需结果。&lt;/li&gt;
+&lt;li&gt;关系代数是命令式的，描述了查询的过程，而不是结果的约束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;关系代数基本操作符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择 (Selection, σ)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选择操作从一个关系（表）中挑选出符合某个条件的元组（行）。&lt;/li&gt;
+&lt;li&gt;形式：σ_condition (R)&lt;/li&gt;
+&lt;li&gt;示例：σ_country=&#39;AUS&#39;(Student) 会返回所有国家为 “澳大利亚” 的学生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;投影 (Projection, π)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;投影操作从一个关系中选择特定的属性（列），并删除重复的元组。&lt;/li&gt;
+&lt;li&gt;形式：π_attributes (R)&lt;/li&gt;
+&lt;li&gt;示例：π_name, country (Student) 返回学生表中的姓名和国家列，去除重复值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;笛卡尔积 (Cross Product, ×)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;笛卡尔积操作将两个关系的所有元组进行组合，形成新的关系，结果的每一行都是两个关系中元组的所有可能组合。比如学生表有 2 条数据，老师表有 3 条数据，组成的新表就有 6 条数据。&lt;/li&gt;
+&lt;li&gt;形式：R × S&lt;/li&gt;
+&lt;li&gt;示例：Student × Enrolled 将两个表中的每一个元组组合在一起。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联合 (Union, ∪)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;联合操作返回两个关系中的所有元组，自动去除重复的行。&lt;/li&gt;
+&lt;li&gt;形式：R ∪ S&lt;/li&gt;
+&lt;li&gt;示例：π_sid (Student) ∪ π_sid (Enrolled) 返回在学生和选课表中出现的所有学生 ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;交集 (Intersection, ∩)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;交集操作返回在两个关系中都存在的元组。&lt;/li&gt;
+&lt;li&gt;形式：R ∩ S&lt;/li&gt;
+&lt;li&gt;示例：π_sid (Student) ∩ π_sid (Enrolled) 返回同时出现在学生表和选课表中的学生 ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;差集 (Difference, −)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;差集操作返回在第一个关系中存在但在第二个关系中不存在的元组。&lt;/li&gt;
+&lt;li&gt;形式：R − S&lt;/li&gt;
+&lt;li&gt;示例：π_sid (Student) − π_sid (Enrolled) 返回只在学生表中存在而没有选课的学生 ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;连接操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;连接操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连接操作&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;连接操作&lt;/span&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;条件连接 (Theta Join, ⋈ₛ)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：条件连接是基于给定的条件，将两个关系的笛卡尔积中的行进行筛选。该条件可以是任意的布尔表达式（例如  &lt;code&gt;=&lt;/code&gt; 、 &lt;code&gt;&amp;gt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;&lt;/code&gt;  等比较操作符）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈ₛ S&lt;/code&gt; ，其中  &lt;code&gt;ₛ&lt;/code&gt;  是连接条件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：假设有两个表  &lt;code&gt;Student&lt;/code&gt;  和  &lt;code&gt;Enrolled&lt;/code&gt; ，我们希望查找学生和他们所选的课程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表  &lt;code&gt;Student&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;sid&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;country&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;lan&lt;/td&gt;
+&lt;td&gt;AUS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;Ha&lt;/td&gt;
+&lt;td&gt;ROK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;- 表 `Enrolled`:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;sid&lt;/th&gt;
+&lt;th&gt;uos_code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​&lt;br&gt;
+查询学生与他们所选课程，可以使用  &lt;code&gt;sid&lt;/code&gt;  作为连接条件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- `Student ⋈_&amp;#123;Student.sid = Enrolled.sid&amp;#125; Enrolled`:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;sid&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;country&lt;/th&gt;
+&lt;th&gt;uos_code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;lan&lt;/td&gt;
+&lt;td&gt;AUS&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;Ha&lt;/td&gt;
+&lt;td&gt;ROK&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;通过这个操作，我们得到了两个表中  &lt;code&gt;sid&lt;/code&gt;  匹配的行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;自然连接 (Natural Join, ⋈)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：自然连接是一种特殊的等值连接，它自动基于两个关系中&lt;strong&gt;具有相同名称&lt;/strong&gt;且&lt;strong&gt;值相等&lt;/strong&gt;的属性进行连接，且在结果中只保留一个重复的属性列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈ S&lt;/code&gt; ，连接条件是所有同名属性相等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：考虑前面的  &lt;code&gt;Student&lt;/code&gt;  和  &lt;code&gt;Enrolled&lt;/code&gt;  表，假设我们要进行自然连接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Student ⋈ Enrolled&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;sid&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;country&lt;/th&gt;
+&lt;th&gt;uos_code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;lan&lt;/td&gt;
+&lt;td&gt;AUS&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;Ha&lt;/td&gt;
+&lt;td&gt;ROK&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在自然连接中， &lt;code&gt;sid&lt;/code&gt;  是两个表中共有的属性，连接后只保留一列  &lt;code&gt;sid&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;等值连接 (Equi-Join)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：等值连接是条件连接的一种特例，连接条件只包含相等比较（ &lt;code&gt;=&lt;/code&gt; ）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R ⋈_&amp;#123;A = B&amp;#125; S&lt;/code&gt; ，其中  &lt;code&gt;A&lt;/code&gt;  和  &lt;code&gt;B&lt;/code&gt;  是两个表中的属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与自然连接的区别&lt;/strong&gt;：等值连接会保留连接条件中的重复属性，而自然连接则去掉重复列。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;： &lt;code&gt;Student ⋈_&amp;#123;Student.sid = Enrolled.sid&amp;#125; Enrolled&lt;/code&gt; ，结果中会保留两个  &lt;code&gt;sid&lt;/code&gt;  列。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;外连接 (Outer Join)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;外连接允许在结果中包含没有匹配行的元组，并填充相应部分为  &lt;code&gt;NULL&lt;/code&gt; 。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;左外连接 (Left Outer Join)&lt;/strong&gt;：返回左表中的所有元组，即使右表中没有匹配的行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R LEFT OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;示例&lt;/strong&gt;： &lt;code&gt;Student LEFT OUTER JOIN Enrolled&lt;/code&gt;  会返回学生表中的所有行，即使有些学生没有选课，未匹配的部分用  &lt;code&gt;NULL&lt;/code&gt;  填充：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;sid&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;country&lt;/th&gt;
+&lt;th&gt;uos_code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;lan&lt;/td&gt;
+&lt;td&gt;AUS&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;HA&lt;/td&gt;
+&lt;td&gt;ROK&lt;/td&gt;
+&lt;td&gt;COMP5318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1003&lt;/td&gt;
+&lt;td&gt;Grant&lt;/td&gt;
+&lt;td&gt;AUS&lt;/td&gt;
+&lt;td&gt;NULL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;右外连接 (Right Outer Join)&lt;/strong&gt;：返回右表中的所有元组，即使左表中没有匹配的行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R RIGHT OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全外连接 (Full Outer Join)&lt;/strong&gt;：返回两个表中的所有元组，包括没有匹配的行，并将未匹配的部分用  &lt;code&gt;NULL&lt;/code&gt;  填充。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;形式&lt;/strong&gt;： &lt;code&gt;R FULL OUTER JOIN S&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sql简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql简介&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;SQL 简介&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;在 SQL 中，集合操作用于对两个查询结果集进行运算，类似于关系代数中的集合运算。常见的 SQL 集合操作包括  &lt;code&gt;UNION&lt;/code&gt; 、 &lt;code&gt;INTERSECT&lt;/code&gt;  和  &lt;code&gt;EXCEPT&lt;/code&gt; 。这些操作用于合并、比较两个查询的结果集，并遵循集合的基本规则，如去除重复数据。每个操作都需要两个结果集具有&lt;strong&gt;相同数量的列&lt;/strong&gt;，且相应列的数据类型必须兼容。&lt;/p&gt;
+&lt;h3 id=&#34;1-union并集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-union并集&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;UNION&lt;/strong&gt;（并集）&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;UNION&lt;/code&gt;  操作返回两个查询结果的并集，也就是说，它会包含两个结果集中所有的行，且自动去除重复的行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;br&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该查询将返回  &lt;code&gt;Students&lt;/code&gt;  表和  &lt;code&gt;Teachers&lt;/code&gt;  表中的所有不同的名字（去重）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动去除重复行。&lt;/li&gt;
+&lt;li&gt;可以使用  &lt;code&gt;UNION ALL&lt;/code&gt;  来保留重复行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;br&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;UNION&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;ALL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;UNION ALL&lt;/code&gt;  将返回所有行，包括重复的行。&lt;/p&gt;
+&lt;h3 id=&#34;2-intersect交集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-intersect交集&#34;&gt;#&lt;/a&gt; 2. **INTERSECT（** 交集）&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;INTERSECT&lt;/code&gt;  操作返回两个查询结果的交集，即只返回在两个查询结果中都存在的行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INTERSECT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;示例&lt;br&gt;
+ &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INTERSECT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该查询将返回既是  &lt;code&gt;Students&lt;/code&gt;  表又是  &lt;code&gt;Teachers&lt;/code&gt;  表中的名字（即两个表中都存在的名字）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;只返回两个结果集中都出现的行。&lt;/li&gt;
+&lt;li&gt;自动去除重复行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-except差集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-except差集&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;EXCEPT&lt;/strong&gt;（差集）&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;EXCEPT&lt;/code&gt;  操作返回在第一个查询结果中存在但在第二个查询结果中不存在的行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;EXCEPT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; 列&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, 列&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; 表&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;示例&lt;br&gt;
+ &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Students&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;EXCEPT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; Teachers;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该查询将返回所有只存在于  &lt;code&gt;Students&lt;/code&gt;  表中但不在  &lt;code&gt;Teachers&lt;/code&gt;  表中的名字。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回只出现在第一个结果集中的行。&lt;/li&gt;
+&lt;li&gt;自动去除重复行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-union-intersect-和-except-的规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-union-intersect-和-except-的规则&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;UNION、INTERSECT 和 EXCEPT 的规则&lt;/strong&gt;：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;列数必须相同&lt;/strong&gt;：在两个查询中， &lt;code&gt;SELECT&lt;/code&gt;  子句中的列数量必须一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据类型必须兼容&lt;/strong&gt;：相应列的数据类型必须相同或兼容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;去除重复行&lt;/strong&gt;：默认情况下， &lt;code&gt;UNION&lt;/code&gt; 、 &lt;code&gt;INTERSECT&lt;/code&gt;  和  &lt;code&gt;EXCEPT&lt;/code&gt;  都会去除重复的行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用 ALL 保留重复行&lt;/strong&gt;：如果希望保留重复行，可以使用  &lt;code&gt;UNION ALL&lt;/code&gt; ，但  &lt;code&gt;INTERSECT ALL&lt;/code&gt;  和  &lt;code&gt;EXCEPT ALL&lt;/code&gt;  在部分 SQL 实现中并不支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt; &lt;code&gt;UNION&lt;/code&gt; &lt;/strong&gt; 返回两个查询结果集的并集，去除重复行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; &lt;code&gt;INTERSECT&lt;/code&gt; &lt;/strong&gt; 返回两个查询结果集的交集，即共同存在的行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; &lt;code&gt;EXCEPT&lt;/code&gt; &lt;/strong&gt; 返回第一个结果集中有但第二个结果集中没有的行。&lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>
         </item>
