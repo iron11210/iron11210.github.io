@@ -10,8 +10,682 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 25 Oct 2024 11:35:46 +1100</pubDate>
-        <lastBuildDate>Fri, 25 Oct 2024 11:35:46 +1100</lastBuildDate>
+        <pubDate>Thu, 31 Oct 2024 00:14:05 +1100</pubDate>
+        <lastBuildDate>Thu, 31 Oct 2024 00:14:05 +1100</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/31/game-engine/unity/unityBasics/unity-2d%20%E8%B7%B3%E8%B7%83%E4%B8%8E%E8%90%BD%E4%B8%8B%E5%8A%A8%E7%94%BB&amp;&amp;bug%E8%A7%A3%E5%86%B3/</guid>
+            <title>unity-2d 跳跃与落下动画</title>
+            <link>http://example.com/2024/10/31/game-engine/unity/unityBasics/unity-2d%20%E8%B7%B3%E8%B7%83%E4%B8%8E%E8%90%BD%E4%B8%8B%E5%8A%A8%E7%94%BB&amp;&amp;bug%E8%A7%A3%E5%86%B3/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
+            <category term="unity基础" scheme="http://example.com/categories/game-engine/unity/unityBasics/" />
+            <pubDate>Thu, 31 Oct 2024 00:14:05 +1100</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;unity-2d-跳跃落下动画&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-2d-跳跃落下动画&#34;&gt;#&lt;/a&gt; unity-2d 跳跃落下动画&lt;/h2&gt;
+&lt;h3 id=&#34;1blend-tree-的主要用途&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1blend-tree-的主要用途&#34;&gt;#&lt;/a&gt; 1.Blend Tree 的主要用途&lt;/h3&gt;
+&lt;p&gt;Blend Tree 的主要用途是根据多个变量（如速度、方向等）动态地调整角色的动画。例如，在 2D 或 3D 游戏中，可以根据角色的速度和方向来在行走、跑步等动画之间平滑过渡，而不是直接切换状态，从而避免生硬的动画效果。&lt;/p&gt;
+&lt;h4 id=&#34;如何创建和使用-blend-tree&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何创建和使用-blend-tree&#34;&gt;#&lt;/a&gt; 如何创建和使用 Blend Tree&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建 Blend Tree&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 Animator 控制器窗口中，右键点击并选择 &lt;strong&gt;Create State &amp;gt; From New Blend Tree&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;双击 Blend Tree 状态进入其配置界面，你会看到一个新的编辑面板。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;添加参数&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 Blend Tree 面板的左侧，点击 &lt;strong&gt;+ Add Parameter&lt;/strong&gt; 创建动画参数。这些参数通常是  &lt;code&gt;Float&lt;/code&gt;  类型，比如  &lt;code&gt;speed&lt;/code&gt;  或  &lt;code&gt;direction&lt;/code&gt; ，用于控制动画的混合。&lt;/li&gt;
+&lt;li&gt;参数可以通过代码或 Animator 控制器来设置，用于根据角色状态实时更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;添加动画&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击 &lt;strong&gt;+ Add Motion Field&lt;/strong&gt; 将动画剪辑添加到 Blend Tree 中。&lt;/li&gt;
+&lt;li&gt;为每个动画设定相应的参数值。比如，可以将  &lt;code&gt;speed&lt;/code&gt;  设为 0 表示静止，1 表示行走，2 表示跑步。&lt;/li&gt;
+&lt;li&gt;Unity 会根据参数的值自动在不同动画之间插值，创建平滑过渡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择混合类型&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity 提供了多种混合类型，例如 &lt;strong&gt;1D&lt;/strong&gt; 和 &lt;strong&gt;2D&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1D Blend Tree&lt;/strong&gt;：适合单一参数的场景，比如角色从站立到行走再到奔跑的过渡，使用  &lt;code&gt;speed&lt;/code&gt;  作为参数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2D Blend Tree&lt;/strong&gt;：适合有两个参数的场景，比如角色的  &lt;code&gt;speed&lt;/code&gt;  和  &lt;code&gt;direction&lt;/code&gt; ，可用于根据方向来控制行走或跑步的方向。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2D Blend Tree 提供了 &lt;strong&gt;Simple Directional&lt;/strong&gt; 和 &lt;strong&gt;Freeform Cartesian&lt;/strong&gt; 等选项，根据你的需求选择适合的类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;参数控制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在代码中使用  &lt;code&gt;Animator.SetFloat(&amp;quot;speed&amp;quot;, value)&lt;/code&gt;  等方法来动态设置参数值，Blend Tree 会根据这些值自动更新动画状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-创建blend-tree控制跳跃与下落动画的实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-创建blend-tree控制跳跃与下落动画的实现&#34;&gt;#&lt;/a&gt; 2. 创建 blend tree 控制跳跃与下落动画的实现&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;添加 blend&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E5%88%9B%E5%BB%BAblendtree.png&#34; alt&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;添加动画事件，并修改动画对应 blend 的值&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB.png&#34; alt&gt;&lt;/li&gt;
+&lt;li&gt;修改 blend 的值并在程序中操作&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%94%B9%E5%90%8D%E5%B9%B6%E5%9C%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%8E%A7%E5%88%B6.png&#34; alt&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;AnimatorController&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; moving = rb.velocity.x != &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 判断角色是否在移动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    animator.SetFloat(&lt;span class=&#34;string&#34;&gt;&amp;quot;yVelocity&amp;quot;&lt;/span&gt;, rb.velocity.y);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    animator.SetBool(&lt;span class=&#34;string&#34;&gt;&amp;quot;moving&amp;quot;&lt;/span&gt;, moving);  &lt;span class=&#34;comment&#34;&gt;// 设置动画的&amp;quot;moving&amp;quot;参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    animator.SetBool(&lt;span class=&#34;string&#34;&gt;&amp;quot;isGrounded&amp;quot;&lt;/span&gt;,isGrounded);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修复贴墙速度消失bug&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修复贴墙速度消失bug&#34;&gt;#&lt;/a&gt; 修复贴墙速度消失 bug&lt;/h2&gt;
+&lt;p&gt;右键添加 2d 对象的材质，并设置摩擦力为 0，添加材质到碰撞组件上，bug 修复。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/30/game-engine/unity/unityBasics/unity-2d%20%E5%AE%9E%E7%8E%B0%E8%BD%AC%E5%90%91%E4%B8%8E%E8%B7%B3%E8%B7%83%E9%99%90%E5%88%B6/</guid>
+            <title>unity-2d 实现转向与跳跃限制</title>
+            <link>http://example.com/2024/10/30/game-engine/unity/unityBasics/unity-2d%20%E5%AE%9E%E7%8E%B0%E8%BD%AC%E5%90%91%E4%B8%8E%E8%B7%B3%E8%B7%83%E9%99%90%E5%88%B6/</link>
+            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
+            <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
+            <category term="unity基础" scheme="http://example.com/categories/game-engine/unity/unityBasics/" />
+            <pubDate>Wed, 30 Oct 2024 23:32:19 +1100</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;unity-2d-转向&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-2d-转向&#34;&gt;#&lt;/a&gt; unity-2d 转向&lt;/h2&gt;
+&lt;p&gt;首先，unity-2d 其实也处于一个 3d 的世界当中，只不过所有的元素都是平面状的，所以，我们可以通过改变方向到 180 度来实现人物转向功能&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建变量&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;int&lt;/span&gt; facingDir = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 面向方向（1为右，-1为左）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; facingRight = &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 是否朝右&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; xinput;  &lt;span class=&#34;comment&#34;&gt;// 水平方向输入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;然后，创建反转角色函数&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;ROW&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 角色翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Flip&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    facingDir = &lt;span class=&#34;number&#34;&gt;-1&lt;/span&gt; * facingDir;  &lt;span class=&#34;comment&#34;&gt;// 反转面向方向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    facingRight = !facingRight;  &lt;span class=&#34;comment&#34;&gt;// 切换朝向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    transform.Rotate(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;180&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;);  &lt;span class=&#34;comment&#34;&gt;// 旋转角色，使其面向另一方向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;控制翻转行为&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 控制翻转行为&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;FlipController&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (rb.velocity.x &amp;gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; !facingRight)  &lt;span class=&#34;comment&#34;&gt;// 如果角色向右移动且当前面朝左&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        Flip();  &lt;span class=&#34;comment&#34;&gt;// 执行翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (rb.velocity.x &amp;lt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; facingRight)  &lt;span class=&#34;comment&#34;&gt;// 如果角色向左移动且当前面朝右&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        Flip();  &lt;span class=&#34;comment&#34;&gt;// 执行翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;unity-2d-限制跳跃次数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-2d-限制跳跃次数&#34;&gt;#&lt;/a&gt; unity-2d 限制跳跃次数&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建新的变量与标头，使可读性更高&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[&lt;span class=&#34;meta&#34;&gt;Header(&lt;span class=&#34;string&#34;&gt;&amp;quot;碰撞检测信息&amp;quot;&lt;/span&gt;)&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; groundCheckDistance;  &lt;span class=&#34;comment&#34;&gt;// 地面检测距离&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; LayerMask whatIsGround;  &lt;span class=&#34;comment&#34;&gt;// 表示地面的层级&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; isGrounded;  &lt;span class=&#34;comment&#34;&gt;// 是否在地面上&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;碰撞检测&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 碰撞检测（检测是否在地面上）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;CollisionChecks&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);  &lt;span class=&#34;comment&#34;&gt;// 投射射线检测地面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 绘制Gizmos，用于显示射线&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;OnDrawGizmos&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    Gizmos.DrawLine(transform.position, &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector3(transform.position.x, transform.position.y - groundCheckDistance));  &lt;span class=&#34;comment&#34;&gt;// 在编辑器中显示检测射线&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限制 jump 行为&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Jump&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (isGrounded)  &lt;span class=&#34;comment&#34;&gt;// 检查是否在地面上&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb.velocity = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector2(rb.velocity.x, jumpforce);  &lt;span class=&#34;comment&#34;&gt;// 添加向上的跳跃力&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+ 在 c# 中，只有一行的 if 语句是可以直接写的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Physics2D.Raycast 函数使用：&lt;br&gt;
+&lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;RaycastHit2D hitInfo = Physics2D.Raycast(origin, direction, distance, layerMask);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参数详解&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;origin (Vector2)&lt;/strong&gt; - 射线的起点。
+&lt;ul&gt;
+&lt;li&gt;通常用物体的位置，比如  &lt;code&gt;transform.position&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;direction (Vector2)&lt;/strong&gt; - 射线的方向。
+&lt;ul&gt;
+&lt;li&gt;这是一个二维向量，表示射线的投射方向。例如， &lt;code&gt;Vector2.down&lt;/code&gt;  表示向下， &lt;code&gt;Vector2.right&lt;/code&gt;  表示向右。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;distance (float)&lt;/strong&gt; - 射线的最大检测距离（可选参数）。
+&lt;ul&gt;
+&lt;li&gt;这个参数设定了射线的长度。如果射线超过这个长度没有检测到任何碰撞物，就会返回一个空的  &lt;code&gt;RaycastHit2D&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layerMask (int)&lt;/strong&gt; - 层掩码 (LayerMask)（可选参数）。
+&lt;ul&gt;
+&lt;li&gt;用来指定射线可以检测的层（Layer）。如果只想检测特定的物体，比如地面或墙壁，可以用  &lt;code&gt;LayerMask&lt;/code&gt;  来过滤掉其他不相关的物体。&lt;/li&gt;
+&lt;li&gt;例如， &lt;code&gt;LayerMask.GetMask(&amp;quot;Ground&amp;quot;)&lt;/code&gt;  可以创建一个只检测 &amp;quot;Ground&amp;quot; 层的掩码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;代码总览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码总览&#34;&gt;#&lt;/a&gt; 代码总览&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;103&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;using&lt;/span&gt; System.Collections;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;using&lt;/span&gt; System.Collections.Generic;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;using&lt;/span&gt; UnityEngine;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;player&lt;/span&gt; : &lt;span class=&#34;title&#34;&gt;MonoBehaviour&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 定义变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; Rigidbody2D rb;  &lt;span class=&#34;comment&#34;&gt;// 2D刚体，用于物理控制&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; Animator animator;  &lt;span class=&#34;comment&#34;&gt;// 动画控制器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; moveSpeed;  &lt;span class=&#34;comment&#34;&gt;// 移动速度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; jumpforce;  &lt;span class=&#34;comment&#34;&gt;// 跳跃力度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;int&lt;/span&gt; facingDir = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 面向方向（1为右，-1为左）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; facingRight = &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 是否朝右&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; xinput;  &lt;span class=&#34;comment&#34;&gt;// 水平方向输入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;Header(&lt;span class=&#34;string&#34;&gt;&amp;quot;碰撞检测信息&amp;quot;&lt;/span&gt;)&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; groundCheckDistance;  &lt;span class=&#34;comment&#34;&gt;// 地面检测距离&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; LayerMask whatIsGround;  &lt;span class=&#34;comment&#34;&gt;// 表示地面的层级&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; isGrounded;  &lt;span class=&#34;comment&#34;&gt;// 是否在地面上&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// Start方法在游戏开始时调用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Start&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb = GetComponent&amp;lt;Rigidbody2D&amp;gt;();  &lt;span class=&#34;comment&#34;&gt;// 获取2D刚体组件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        animator = GetComponentInChildren&amp;lt;Animator&amp;gt;();  &lt;span class=&#34;comment&#34;&gt;// 获取子对象中的动画组件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// Update方法在每帧调用一次&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Update&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        Movement();  &lt;span class=&#34;comment&#34;&gt;// 控制角色移动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        CheckInput();  &lt;span class=&#34;comment&#34;&gt;// 检查玩家输入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        CollisionChecks();  &lt;span class=&#34;comment&#34;&gt;// 碰撞检测（是否在地面上）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        FlipController();  &lt;span class=&#34;comment&#34;&gt;// 控制角色翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        AnimatorController();  &lt;span class=&#34;comment&#34;&gt;// 控制动画&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 检查玩家输入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;CheckInput&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        xinput = Input.GetAxisRaw(&lt;span class=&#34;string&#34;&gt;&amp;quot;Horizontal&amp;quot;&lt;/span&gt;);  &lt;span class=&#34;comment&#34;&gt;// 获取水平输入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (Input.GetKeyDown(KeyCode.Space))  &lt;span class=&#34;comment&#34;&gt;// 检测空格键跳跃&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Jump();  &lt;span class=&#34;comment&#34;&gt;// 执行跳跃&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Debug.Log(&lt;span class=&#34;string&#34;&gt;&amp;quot;jump&amp;quot;&lt;/span&gt;);  &lt;span class=&#34;comment&#34;&gt;// 输出跳跃信息到控制台&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 控制角色移动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Movement&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;// 更新角色的水平速度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb.velocity = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector2(xinput * moveSpeed, rb.velocity.y);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 跳跃方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Jump&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (isGrounded)  &lt;span class=&#34;comment&#34;&gt;// 检查是否在地面上&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            rb.velocity = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector2(rb.velocity.x, jumpforce);  &lt;span class=&#34;comment&#34;&gt;// 添加向上的跳跃力&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 控制动画状态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;AnimatorController&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; moving = rb.velocity.x != &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;  &lt;span class=&#34;comment&#34;&gt;// 判断角色是否在移动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        animator.SetBool(&lt;span class=&#34;string&#34;&gt;&amp;quot;moving&amp;quot;&lt;/span&gt;, moving);  &lt;span class=&#34;comment&#34;&gt;// 设置动画的&amp;quot;moving&amp;quot;参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 角色翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Flip&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        facingDir = &lt;span class=&#34;number&#34;&gt;-1&lt;/span&gt; * facingDir;  &lt;span class=&#34;comment&#34;&gt;// 反转面向方向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        facingRight = !facingRight;  &lt;span class=&#34;comment&#34;&gt;// 切换朝向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        transform.Rotate(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;180&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;);  &lt;span class=&#34;comment&#34;&gt;// 旋转角色，使其面向另一方向&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 控制翻转行为&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;FlipController&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (rb.velocity.x &amp;gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; !facingRight)  &lt;span class=&#34;comment&#34;&gt;// 如果角色向右移动且当前面朝左&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Flip();  &lt;span class=&#34;comment&#34;&gt;// 执行翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (rb.velocity.x &amp;lt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; facingRight)  &lt;span class=&#34;comment&#34;&gt;// 如果角色向左移动且当前面朝右&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Flip();  &lt;span class=&#34;comment&#34;&gt;// 执行翻转&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 碰撞检测（检测是否在地面上）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;CollisionChecks&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);  &lt;span class=&#34;comment&#34;&gt;// 投射射线检测地面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 绘制Gizmos，用于显示射线&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;OnDrawGizmos&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        Gizmos.DrawLine(transform.position, &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector3(transform.position.x, transform.position.y - groundCheckDistance));  &lt;span class=&#34;comment&#34;&gt;// 在编辑器中显示检测射线&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/29/computer/database/final%E5%A4%8D%E4%B9%A001/</guid>
+            <title>final复习01</title>
+            <link>http://example.com/2024/10/29/computer/database/final%E5%A4%8D%E4%B9%A001/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="数据库" scheme="http://example.com/categories/computer/database/" />
+            <pubDate>Tue, 29 Oct 2024 10:43:19 +1100</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;e-r图和r-m图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#e-r图和r-m图&#34;&gt;#&lt;/a&gt; E-R 图和 R-M 图&lt;/h2&gt;
+&lt;h3 id=&#34;思维导图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思维导图&#34;&gt;#&lt;/a&gt; 思维导图&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/database%2F%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241029224733.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;继承关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#继承关系&#34;&gt;#&lt;/a&gt; 继承关系&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/database%2F%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB.png&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;细节&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#细节&#34;&gt;#&lt;/a&gt; 细节&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;各种线段&lt;br&gt;
+粗实线：表示至少有一个&lt;br&gt;
+细实线：表示 0-n&lt;br&gt;
+ 粗箭头：表示有且仅有一个&lt;/li&gt;
+&lt;li&gt;E-R 图细节&lt;br&gt;
+如果有某个实体依赖于另一个实体，这个实体为弱实体，此实体主键需要画虚线。&lt;br&gt;
+如果某个属性为多值属性，此属性绘画时需要标注为弱属性，两个圈表示；如果某个属性为复合型属性，即包含 (address,postcode,etc..)，此属性绘画时需要画出包含的属性。&lt;/li&gt;
+&lt;li&gt;E-R 图转 R-M 图&lt;br&gt;
+在 E-R 图中，如 N-1 的关系，N 的一方需要在 R-M 图中添加外键到 1 的一方的 PK。如果某个关系为 m-n，R-M 图中需要新建一个关系表来表示；如果为三元关系同理也需要，此时新表包含三个 &amp;amp; 两个表的主键，同时也是外键。某个关系包含属性时，此关系也需要重新建表，且包含两个属性的主键。&lt;br&gt;
+多值属性在转 RM 时也需要重新建一张表，但是复合型属性需要删除，同时子属性不删除。&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/28/computer/networks/network_lec_7%20Design%20ofNetworks%20and%20DistributedSystems/</guid>
+            <title>lecture_7 Design ofNetworks and DistributedSystems</title>
+            <link>http://example.com/2024/10/28/computer/networks/network_lec_7%20Design%20ofNetworks%20and%20DistributedSystems/</link>
+            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+            <category term="计算机网络" scheme="http://example.com/categories/computer/networks/" />
+            <pubDate>Mon, 28 Oct 2024 11:59:00 +1100</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;数据平面data-plane&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据平面data-plane&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;数据平面（Data Plane）&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1-数据平面的功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-数据平面的功能&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;数据平面的功能&lt;/strong&gt;：&lt;/h3&gt;
+&lt;p&gt;数据平面在每个路由器上本地执行，负责将进入路由器的分组从输入端口转发到正确的输出端口。核心任务是根据路由表决定每个数据包的转发路径​。&lt;/p&gt;
+&lt;h3 id=&#34;2-转发表forwarding-table&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-转发表forwarding-table&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;转发表（Forwarding Table）&lt;/strong&gt;：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;每个路由器的转发表决定了数据包的转发规则。数据平面根据数据包头中的字段值（如目的IP地址）匹配相应规则，并执行相应的操作，如转发到特定端口或丢弃​。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-openflow和流表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-openflow和流表&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;OpenFlow 和流表&lt;/strong&gt;：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;在SDN架构中，数据平面使用OpenFlow等协议支持的流表（Flow Table），可以灵活定义转发规则。流表包含匹配字段、操作（例如转发、丢弃、修改）和计数器。控制器根据网络状态动态下发这些规则，以适应网络需求​.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/networks%2F%E8%BD%AC%E5%8F%91%E8%A1%A8.png&#34; alt&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/networks%2F%E8%BD%AC%E5%8F%91%E8%A1%A8%E7%A4%BA%E4%BE%8B.png&#34; alt&gt;&lt;br&gt;
+如上图我们可以看到&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Destination-based forwarding（基于目标地址的转发）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;匹配条件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;目标 IP 地址为  &lt;code&gt;51.6.0.8&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;其他字段使用通配符  &lt;code&gt;*&lt;/code&gt; ，表示任何值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;动作是将符合条件的数据包转发到端口  &lt;code&gt;port6&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解释&lt;/strong&gt;：这个规则的作用是，当数据包的目标地址为  &lt;code&gt;51.6.0.8&lt;/code&gt;  时，将该数据包转发到交换机的端口 6。这样可以确保发往该地址的数据包沿着预设路径传输，通常用于路由数据包到特定的目的地。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Firewall（防火墙规则）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规则 1&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;匹配条件：TCP 的目标端口为  &lt;code&gt;22&lt;/code&gt; （通常用于 SSH 连接）。&lt;/li&gt;
+&lt;li&gt;其他字段使用通配符  &lt;code&gt;*&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作&lt;/strong&gt;：丢弃数据包（drop）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解释&lt;/strong&gt;：这个规则的目的是阻止所有目标端口为 22 的数据包，起到屏蔽 SSH 流量的作用。这种规则通常用于限制对特定服务的访问，以增强网络的安全性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规则 2&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;匹配条件：源 IP 地址为  &lt;code&gt;128.119.1.1&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;其他字段使用通配符  &lt;code&gt;*&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作&lt;/strong&gt;：丢弃数据包（drop）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解释&lt;/strong&gt;：此规则阻止所有来自  &lt;code&gt;128.119.1.1&lt;/code&gt;  主机的流量。可能用于封锁特定设备或网络源的访问，防止来自该源的恶意流量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-通用转发generalized-forwarding&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-通用转发generalized-forwarding&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;通用转发（Generalized Forwarding）&lt;/strong&gt;：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;通用转发允许更细粒度的规则定义，例如基于源/目的IP地址、端口号等字段来处理数据包。这一机制使得数据平面可以灵活地执行各种操作，不仅限于简单的IP转发​。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;控制平面control-plane&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#控制平面control-plane&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;控制平面（Control Plane）&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;在 SDN（软件定义网络）中，** 控制平面（Control Plane）** 负责网络的逻辑控制和管理决策，是 SDN 架构的核心部分。它与数据平面（Data Plane）分离，使网络管理更加灵活和集中化。以下是控制平面的主要内容：&lt;/p&gt;
+&lt;h3 id=&#34;1-控制平面的功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-控制平面的功能&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;控制平面的功能&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;路由决策&lt;/strong&gt;：控制平面负责计算最佳路径，将路径信息下发给数据平面。例如，它决定不同数据包通过的路径，以达到最优的流量管理和资源利用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;策略管理&lt;/strong&gt;：控制平面可以根据业务需求或策略规定数据包的处理方式。例如，它可以定义哪些数据包需要优先处理、哪些流量要进行限制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集中控制&lt;/strong&gt;：在 SDN 中，控制平面通常由一个集中控制器（如 OpenDaylight、ONOS 等）实现。这个集中控制器管理整个网络的规则和策略，为各个交换机和路由器提供统一的控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-控制器与数据平面的交互&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-控制器与数据平面的交互&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;控制器与数据平面的交互&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenFlow 协议&lt;/strong&gt;：控制平面通常通过 OpenFlow 协议与数据平面交换机和路由器通信。控制器通过下发流表规则，告知交换机如何处理不同的数据包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流表规则的下发与更新&lt;/strong&gt;：控制平面根据实时网络状态下发或更新流表规则，控制数据包的转发路径。例如，当检测到拥塞时，控制器可以重新配置流表，将流量分配到其他路径上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-网络拓扑的发现和监控&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-网络拓扑的发现和监控&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;网络拓扑的发现和监控&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拓扑发现&lt;/strong&gt;：控制平面可以监控网络中设备的连接关系，自动生成和更新网络拓扑图。这使得控制器可以实时了解网络的结构，并在路径规划时考虑网络设备的物理位置和连接情况。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能监控和故障检测&lt;/strong&gt;：控制平面可以采集网络中各设备的状态信息（如流量负载、延迟），并根据监控数据检测故障。例如，如果某条路径出现故障，控制平面可以迅速重新规划路径，将流量重新路由到其他可用路径。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-控制平面的优势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-控制平面的优势&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;控制平面的优势&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;集中化管理&lt;/strong&gt;：控制平面将网络的控制逻辑集中在控制器上，使网络管理和策略应用变得更加统一和简便。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态适应性&lt;/strong&gt;：控制平面可以根据实时数据和业务需求，动态调整网络配置和流量分配。比如，它可以自动调整流量优先级，以确保关键应用的带宽需求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易扩展性&lt;/strong&gt;：通过控制平面，网络管理员可以灵活地添加新规则，满足不断变化的网络需求，适应大规模和复杂的网络环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-典型应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-典型应用场景&#34;&gt;#&lt;/a&gt; 5. &lt;strong&gt;典型应用场景&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;流量工程&lt;/strong&gt;：控制平面可以根据网络负载情况，动态调整数据包的转发路径，平衡流量负载，优化资源使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络安全&lt;/strong&gt;：控制器可以检测异常流量或攻击行为，快速应用安全策略（如阻断恶意流量或隔离受感染设备）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务质量（QoS）管理&lt;/strong&gt;：控制平面可以确保高优先级业务（如视频会议）的带宽需求，同时限制低优先级业务，以提供更好的服务质量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/networks%2F%E6%8E%A7%E5%88%B6%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E7%A4%BA%E4%BE%8B.png&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;示例解读&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#示例解读&#34;&gt;#&lt;/a&gt; 示例解读&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;链路故障检测&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在图中， &lt;code&gt;S1&lt;/code&gt;  交换机检测到与  &lt;code&gt;S2&lt;/code&gt;  之间的链路发生故障（红色链接）。通过 OpenFlow 协议， &lt;code&gt;S1&lt;/code&gt;  发送一个端口状态消息（port status message）给 SDN 控制器，通知链路状态的变化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;控制器接收故障消息&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SDN 控制器收到来自  &lt;code&gt;S1&lt;/code&gt;  的 OpenFlow 消息，并更新链路状态信息。控制器在内存中维护网络拓扑和链路状态，这样它可以根据最新的网络状态做出决策。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;触发路由算法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在控制器中，Dijkstra’s link-state Routing（Dijkstra 链路状态路由算法）应用程序已经预先注册，以便在链路状态变化时被调用。当控制器更新链路状态后，自动调用该路由算法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重新计算路由&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dijkstra 路由算法访问控制器中的网络图信息和链路状态信息，并计算新的路由。该算法会考虑网络中其他节点和链路的状态，以找到从源到目的地的最优路径。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更新流表&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新的路由计算完成后，控制器会生成更新后的流表，并通过 OpenFlow 协议下发到各个相关交换机（如  &lt;code&gt;S1&lt;/code&gt; 、 &lt;code&gt;S2&lt;/code&gt; 、 &lt;code&gt;S3&lt;/code&gt;  等）。这些交换机会根据新的流表规则调整数据包的转发路径。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据恢复&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一旦流表更新完成，网络中的流量将按照新路径进行传输，确保数据流在故障恢复后的最短时间内继续传输，从而实现网络的动态修复和负载均衡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;关键要点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenFlow 协议&lt;/strong&gt;：控制器和交换机之间的通信依赖 OpenFlow 协议。交换机将链路故障等事件上报给控制器，控制器下发新的流表规则。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;链路状态路由&lt;/strong&gt;：Dijkstra 算法是一种链路状态路由算法，可以快速计算最优路径。控制器利用该算法在网络故障时重新计算路径，确保网络的高效运行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集中控制&lt;/strong&gt;：在 SDN 架构中，控制器充当了网络的 “中枢神经”，统一管理和协调网络的各个设备，实现了传统网络难以实现的快速恢复和灵活路由。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;transport-services传输服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#transport-services传输服务&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;Transport Services（传输服务）&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1-传输层的主要功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-传输层的主要功能&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;传输层的主要功能&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进程到进程的通信&lt;/strong&gt;：传输层提供应用进程之间的通信服务。不同于网络层提供的主机到主机的通信，传输层能够识别主机上具体的应用进程（如通过端口号），从而实现进程间的直接通信。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多路复用与多路分解&lt;/strong&gt;：通过端口号，传输层可以支持多个应用程序在同一主机上同时使用网络通信。这使得来自不同应用的数据可以被正确地分解并发送给合适的进程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-传输层的核心服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-传输层的核心服务&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;传输层的核心服务&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;传输层提供了两种主要的服务类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;面向连接的服务（例如 TCP）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;可靠数据传输&lt;/strong&gt;：TCP 通过确认（ACK）、重传（retransmission）等机制确保数据包在传输中不丢失、不重复、按顺序到达。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流量控制&lt;/strong&gt;：TCP 实现流量控制，以防止发送方发送的数据过多，超出接收方的处理能力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拥塞控制&lt;/strong&gt;：TCP 还提供拥塞控制功能，监测网络拥塞状态，动态调整发送速率，以避免网络拥堵。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连接管理&lt;/strong&gt;：在数据传输前，TCP 使用三次握手建立连接，并在传输完成后使用四次挥手释放连接，确保端到端的可靠连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;无连接的服务（例如 UDP）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;尽最大努力交付&lt;/strong&gt;：UDP 不保证数据包的可靠传输，不使用重传机制，数据可能丢失、重复或乱序到达。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;低延迟&lt;/strong&gt;：UDP 因为不保证可靠性和顺序性，传输过程简单，因此传输延迟较低，适合对实时性要求较高的应用，如视频流和在线游戏。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无连接传输&lt;/strong&gt;：UDP 不建立连接，数据包可直接发送给目标，减少了连接建立的开销。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-传输服务的典型应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-传输服务的典型应用场景&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;传输服务的典型应用场景&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TCP 的应用场景&lt;/strong&gt;：适用于对数据完整性和可靠性有较高要求的应用，如网页浏览（HTTP）、电子邮件（SMTP）、文件传输（FTP）等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UDP 的应用场景&lt;/strong&gt;：适用于实时性更高的应用，如视频会议、在线游戏、DNS 查询等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-qos服务质量支持&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-qos服务质量支持&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;QoS（服务质量）支持&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;传输服务还可以在一定程度上支持 QoS 需求，例如，通过设置不同的优先级或带宽控制来满足不同应用的传输要求。&lt;/li&gt;
+&lt;li&gt;对于实时应用，UDP 通常优于 TCP，因为它减少了传输开销和延迟，但无法提供可靠性保障。TCP 则通过其可靠性和流量控制特性，适合需要数据完整性的应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;udp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;UDP&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1-udp的主要特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-udp的主要特性&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;UDP 的主要特性&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;无连接&lt;/strong&gt;：UDP 是无连接的传输协议，发送数据前无需建立连接，接收方也无需确认。发送方可以直接将数据报发送到目标端口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可靠传输&lt;/strong&gt;：UDP 不保证数据报的可靠性，即数据可能丢失、重复、或乱序到达。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无重传机制&lt;/strong&gt;：UDP 不实现重传机制，丢失的数据不会再次发送，这减少了延迟和开销。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简单的头部结构&lt;/strong&gt;：UDP 的数据包头部很简单，仅包含源端口、目的端口、数据长度和校验和等少量信息，使得它的开销小、处理快。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-udp头部结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-udp头部结构&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;UDP 头部结构&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;源端口（Source Port）&lt;/strong&gt;：可选项，表示数据包的发送端口，方便接收端识别数据的来源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目的端口（Destination Port）&lt;/strong&gt;：必选项，表示数据包的接收端口，接收方根据此端口号将数据包分发到相应的应用进程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长度（Length）&lt;/strong&gt;：UDP 报文的总长度，包括头部和数据部分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;校验和（Checksum）&lt;/strong&gt;：用于检验数据的完整性，但不提供纠错功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-udp的多路复用和多路分解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-udp的多路复用和多路分解&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;UDP 的多路复用和多路分解&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多路复用（Multiplexing）&lt;/strong&gt;：多个应用程序在同一主机上可以使用不同的 UDP 端口号向网络发送数据。每个数据包通过一个特定的 UDP 端口发送，确保发送端的数据流可以正确地传输到接收方。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多路分解（Demultiplexing）&lt;/strong&gt;：接收方的传输层通过数据包的目的端口号，将收到的数据包分配给相应的应用进程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于端口的分解&lt;/strong&gt;：UDP 的多路分解仅依赖于目的端口号，而不考虑源 IP 或源端口。这意味着不同的源可以通过相同的目的端口号将数据发送给同一个接收进程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-udp的典型应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-udp的典型应用场景&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;UDP 的典型应用场景&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实时应用&lt;/strong&gt;：如视频会议、IP 电话、在线游戏等应用。它们对延迟敏感且要求数据尽快到达，丢包不会严重影响体验，因此更适合使用 UDP。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;广播和多播&lt;/strong&gt;：UDP 支持广播和多播，可以将数据同时发送给多个接收方，适合用于局域网中的发现服务（如 DHCP、UPnP 等）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简化的传输需求&lt;/strong&gt;：如 DNS 查询、SNMP 等应用，只需发送小数据量且无需重传。丢包对这些应用影响较小，因此它们更适合使用 UDP。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-udp的优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-udp的优缺点&#34;&gt;#&lt;/a&gt; 5. &lt;strong&gt;UDP 的优缺点&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;低延迟&lt;/strong&gt;：无连接、无重传的特性使得 UDP 传输延迟低，适合实时应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简单高效&lt;/strong&gt;：头部结构简单，数据处理开销小。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持广播 / 多播&lt;/strong&gt;：便于在局域网中进行资源发现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不可靠&lt;/strong&gt;：无重传和确认机制，数据可能丢失或乱序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无流量控制和拥塞控制&lt;/strong&gt;：可能导致网络拥堵或过载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-udp和tcp的对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-udp和tcp的对比&#34;&gt;#&lt;/a&gt; 6. &lt;strong&gt;UDP 和 TCP 的对比&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;可靠性&lt;/strong&gt;：TCP 提供可靠传输和重传机制，而 UDP 不保证数据的传输可靠性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;延迟&lt;/strong&gt;：UDP 延迟更低，因为它无需建立连接和等待确认。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据顺序&lt;/strong&gt;：TCP 保证数据按序到达，UDP 则不保证顺序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：TCP 适用于需要可靠性、数据完整性的应用，如文件传输、网页浏览；UDP 适用于对实时性要求高、允许丢包的应用，如视频流和 DNS 查询。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;TCP&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;在传输层协议中，**TCP（Transmission Control Protocol，传输控制协议）** 是一种面向连接、可靠的传输协议。与 UDP 相比，TCP 提供了数据的可靠传输、流量控制和拥塞控制，是大多数对数据完整性要求较高的应用的首选协议。以下是 TCP 部分的核心内容：&lt;/p&gt;
+&lt;h3 id=&#34;1-tcp的主要特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-tcp的主要特性&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;TCP 的主要特性&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面向连接&lt;/strong&gt;：TCP 是面向连接的协议，数据传输前需要建立连接。TCP 通过三次握手建立连接，并通过四次挥手断开连接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可靠传输&lt;/strong&gt;：TCP 通过确认（ACK）、重传机制确保数据不丢失、不重复、按顺序到达接收方。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有序传输&lt;/strong&gt;：TCP 对数据包进行编号（序列号），接收方根据序列号将数据包按正确的顺序排列，从而保证数据的有序性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全双工通信&lt;/strong&gt;：TCP 支持全双工通信，允许通信双方在同一时间内发送和接收数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流量控制&lt;/strong&gt;：TCP 使用滑动窗口机制进行流量控制，确保发送方的发送速率不会超出接收方的接收能力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拥塞控制&lt;/strong&gt;：TCP 具有拥塞控制机制，通过动态调整发送速率来防止网络拥塞。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-tcp连接的建立和断开&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-tcp连接的建立和断开&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;TCP 连接的建立和断开&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;三次握手（Three-Way Handshake）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;连接建立时，TCP 使用三次握手协议。&lt;/li&gt;
+&lt;li&gt;第一步：客户端向服务器发送 SYN（同步）请求。&lt;/li&gt;
+&lt;li&gt;第二步：服务器收到 SYN 后，返回一个 SYN-ACK（同步确认）。&lt;/li&gt;
+&lt;li&gt;第三步：客户端收到 SYN-ACK 后，再发送一个 ACK，连接正式建立。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;四次挥手（Four-Way Teardown）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;连接断开时，TCP 使用四次挥手协议。&lt;/li&gt;
+&lt;li&gt;第一步：客户端向服务器发送 FIN（终止）请求。&lt;/li&gt;
+&lt;li&gt;第二步：服务器收到 FIN 后，返回一个 ACK，表示收到。&lt;/li&gt;
+&lt;li&gt;第三步：服务器在处理完数据后，发送 FIN 请求。&lt;/li&gt;
+&lt;li&gt;第四步：客户端返回 ACK，连接正式断开。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-tcp的可靠性机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-tcp的可靠性机制&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;TCP 的可靠性机制&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;序列号（Sequence Number）&lt;/strong&gt;：TCP 为每个字节分配一个序列号，以确保数据按顺序到达。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;确认应答（ACK）&lt;/strong&gt;：接收方在接收到数据后，向发送方发送确认信息（ACK），告知发送方数据已成功接收。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重传机制&lt;/strong&gt;：如果发送方在超时时间内未收到 ACK，则会重传数据。TCP 根据网络状态调整超时时间，确保数据可靠传输。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;窗口机制&lt;/strong&gt;：TCP 通过窗口机制一次可以发送多个字节的数据，窗口大小取决于接收方的接收能力和网络状况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-tcp的流量控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-tcp的流量控制&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;TCP 的流量控制&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;滑动窗口（Sliding Window）&lt;/strong&gt;：TCP 使用滑动窗口机制进行流量控制，窗口大小代表了发送方在未接收到 ACK 前可以发送的最大数据量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;窗口调整&lt;/strong&gt;：接收方通过通告窗口（Advertised Window）来控制发送方的发送速率。接收方在 ACK 中通告自己的接收窗口大小，发送方根据该窗口调整发送数据的量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目的&lt;/strong&gt;：流量控制确保发送方不会淹没接收方的缓冲区，避免接收方因接收速度不足而丢失数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-tcp的拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-tcp的拥塞控制&#34;&gt;#&lt;/a&gt; 5. &lt;strong&gt;TCP 的拥塞控制&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拥塞窗口（Congestion Window，cwnd）&lt;/strong&gt;：TCP 维护一个拥塞窗口，该窗口根据网络拥塞情况动态变化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;慢启动（Slow Start）&lt;/strong&gt;：在连接开始时，TCP 使用慢启动算法，逐步增加拥塞窗口，探测可用带宽。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拥塞避免（Congestion Avoidance）&lt;/strong&gt;：当拥塞窗口达到阈值后，进入拥塞避免阶段，窗口以线性速度增长。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速重传和快速恢复&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;快速重传&lt;/strong&gt;：当发送方收到三个重复的 ACK 时，认为该数据段丢失，立即重传而不等待超时。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速恢复&lt;/strong&gt;：在快速重传后，TCP 直接进入拥塞避免阶段，避免回到慢启动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-tcp的典型应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-tcp的典型应用场景&#34;&gt;#&lt;/a&gt; 6. &lt;strong&gt;TCP 的典型应用场景&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文件传输&lt;/strong&gt;（如 FTP）：文件传输要求数据的完整性和顺序性，TCP 的可靠性和流量控制确保数据无丢失和按序到达。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网页浏览&lt;/strong&gt;（如 HTTP/HTTPS）：网页浏览要求数据可靠传输，以确保页面内容完整。TCP 的可靠性和流量控制能够确保用户得到完整的网页内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电子邮件&lt;/strong&gt;（如 SMTP）：电子邮件传输需要数据的完整性和正确性，因此 TCP 的可靠传输特性非常适合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-tcp的优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-tcp的优缺点&#34;&gt;#&lt;/a&gt; 7. &lt;strong&gt;TCP 的优缺点&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;可靠传输&lt;/strong&gt;：保证数据按顺序到达且不会丢失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流量和拥塞控制&lt;/strong&gt;：适应不同的网络状况，防止网络拥堵。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有序性&lt;/strong&gt;：数据按顺序到达，适用于大多数需要数据完整性的应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开销较高&lt;/strong&gt;：TCP 头部较复杂，且维护连接状态会增加开销。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;延迟较高&lt;/strong&gt;：TCP 的三次握手和确认机制增加了延迟，不适合对实时性要求较高的应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-tcp和udp的对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-tcp和udp的对比&#34;&gt;#&lt;/a&gt; 8. &lt;strong&gt;TCP 和 UDP 的对比&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;可靠性&lt;/strong&gt;：TCP 提供可靠传输，UDP 不保证可靠性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;延迟&lt;/strong&gt;：UDP 延迟更低，而 TCP 由于需要建立连接和确认机制，延迟较高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：TCP 适用于需要可靠传输的应用，如文件传输和网页浏览；UDP 适用于对实时性要求高的应用，如视频流和 DNS 查询。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;p&gt;TCP 提供了一套复杂而强大的机制，确保数据的可靠传输。通过连接管理、确认机制、流量控制和拥塞控制，TCP 在需要数据完整性的场景下发挥了关键作用。TCP 的可靠性使其成为大多数网络应用（如 HTTP、FTP 和 SMTP）的首选协议。&lt;/p&gt;
+&lt;h2 id=&#34;rdt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdt&#34;&gt;#&lt;/a&gt; RDT&lt;/h2&gt;
+&lt;h4 id=&#34;rdt20的关键要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdt20的关键要点&#34;&gt;#&lt;/a&gt; rdt2.0 的关键要点&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;比特错误检测&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据在传输过程中可能会发生比特翻转（bit-flip），导致数据出错。&lt;/li&gt;
+&lt;li&gt;rdt2.0 使用校验和（checksum）来检测数据包中的比特错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;确认和否认机制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ACK（Acknowledgements）&lt;/strong&gt;：当接收方确认数据包没有错误时，会发送 ACK（确认）消息给发送方，告知数据包正确接收。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NAK（Negative Acknowledgements）&lt;/strong&gt;：当接收方检测到数据包出错时，会发送 NAK（否认）消息给发送方，告知该数据包有错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重传机制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当发送方收到 NAK 时，会重传数据包，以确保数据正确到达接收方。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;新增机制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;错误检测&lt;/strong&gt;：通过校验和实现比特错误检测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接收方反馈&lt;/strong&gt;：接收方通过控制消息（ACK 和 NAK）向发送方反馈接收状态，使发送方能够知道数据包是否需要重传。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;rdt20的工作流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdt20的工作流程&#34;&gt;#&lt;/a&gt; rdt2.0 的工作流程&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;发送方发送数据包，数据包中包含校验和。&lt;/li&gt;
+&lt;li&gt;接收方收到数据包后，检查校验和。
+&lt;ul&gt;
+&lt;li&gt;如果校验和匹配，说明数据包无错误，接收方发送 ACK 给发送方。&lt;/li&gt;
+&lt;li&gt;如果校验和不匹配，说明数据包有错误，接收方发送 NAK，要求发送方重传。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;发送方根据接收到的是 ACK 还是 NAK 来决定是否重传数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/networks%2Frdt.png&#34; alt&gt;&lt;/p&gt;
+&lt;h4 id=&#34;示例发送方状态机解析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#示例发送方状态机解析&#34;&gt;#&lt;/a&gt; 示例：发送方状态机解析&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;等待上层调用（Wait for call from above）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始状态，发送方等待上层应用调用  &lt;code&gt;rdt_send(data)&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;一旦有数据传入，发送方创建数据包（包括数据和校验和）  &lt;code&gt;sndpkt = make_pkt(data, checksum)&lt;/code&gt; ，并通过  &lt;code&gt;udt_send(sndpkt)&lt;/code&gt;  将数据包发送到信道。&lt;/li&gt;
+&lt;li&gt;发送完数据后，发送方进入等待 ACK 或 NAK 的状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;等待 ACK 或 NAK（Wait for ACK or NAK）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发送方在此状态下等待接收方的反馈。&lt;/li&gt;
+&lt;li&gt;如果接收到的是 NAK（ &lt;code&gt;isNAK(rcvpkt)&lt;/code&gt; ），表示数据包出错，发送方会重传数据包  &lt;code&gt;udt_send(sndpkt)&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;如果接收到的是 ACK（ &lt;code&gt;isACK(rcvpkt)&lt;/code&gt; ），表示数据包已正确接收，发送方回到等待上层调用的初始状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;接收方状态机解析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接收方状态机解析&#34;&gt;#&lt;/a&gt; 接收方状态机解析&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;等待数据包（Wait for call from below）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始状态，接收方等待数据包的到来。&lt;/li&gt;
+&lt;li&gt;当接收到一个数据包  &lt;code&gt;rdt_rcv(rcvpkt)&lt;/code&gt;  后，接收方会检查数据包是否损坏。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据包损坏或无误&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;如果数据包损坏（ &lt;code&gt;corrupt(rcvpkt)&lt;/code&gt; ）&lt;/strong&gt;：接收方发送 NAK（ &lt;code&gt;udt_send(NAK)&lt;/code&gt; ）通知发送方重传。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果数据包无误（ &lt;code&gt;notcorrupt(rcvpkt)&lt;/code&gt; ）&lt;/strong&gt;：接收方提取数据  &lt;code&gt;extract(rcvpkt, data)&lt;/code&gt; ，并将其交付给上层  &lt;code&gt;deliver_data(data)&lt;/code&gt; ，然后发送 ACK（ &lt;code&gt;udt_send(ACK)&lt;/code&gt; ）通知发送方数据已正确接收。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/networks%2Frdt2%E7%BC%BA%E9%99%B7.png&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rdt20的缺陷&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdt20的缺陷&#34;&gt;#&lt;/a&gt; rdt2.0 的缺陷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;问题描述&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 ACK 或 NAK 消息在传输过程中被损坏，发送方就无法知道接收方是否正确接收了数据包。&lt;/li&gt;
+&lt;li&gt;发送方在这种情况下无法确定是否需要重传数据包，因为重传可能会导致接收方收到重复的数据包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不能直接重传的原因&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果发送方简单地重传数据包，可能会导致接收方接收到重复的数据，从而影响数据的正确性。&lt;/li&gt;
+&lt;li&gt;由于发送方无法确定接收方的实际状态，因此简单的重传会导致数据包的冗余和不确定性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;处理重复数据包的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#处理重复数据包的方法&#34;&gt;#&lt;/a&gt; 处理重复数据包的方法&lt;/h3&gt;
+&lt;p&gt;为了解决 ACK/NAK 损坏的问题，以及可能导致的重复数据包，rdt2.0 需要进行以下改进：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;添加序列号（Sequence Number）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个数据包附加一个序列号，以区分数据包的唯一性。&lt;/li&gt;
+&lt;li&gt;序列号帮助接收方识别出重复的数据包，从而避免重复交付。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;丢弃重复的数据包&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果接收方检测到数据包的序列号与上一个接收的数据包相同，则丢弃该数据包，不再传递给上层应用。&lt;/li&gt;
+&lt;li&gt;这样可以确保即使发送方因 ACK/NAK 损坏而重传数据，接收方也不会重复处理相同的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;超时重传&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为了防止无限等待，发送方可以使用超时机制。在未收到 ACK/NAK 的情况下，发送方等待一段时间后自动重传数据包。&lt;/li&gt;
+&lt;li&gt;超时机制确保数据包能够最终被成功接收，避免了无休止的等待。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;停止等待机制stop-and-wait&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#停止等待机制stop-and-wait&#34;&gt;#&lt;/a&gt; &lt;strong&gt;“停止等待” 机制（Stop and Wait）&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在这种机制下，发送方每次仅发送一个数据包，然后等待接收方的 ACK 或 NAK 响应。&lt;/li&gt;
+&lt;li&gt;只有在接收到 ACK 后，发送方才会继续发送下一个数据包。如果未收到 ACK（例如 ACK 损坏或丢失），发送方则会重传当前数据包。&lt;/li&gt;
+&lt;li&gt;停止等待机制简化了协议的实现，但可能会导致传输效率下降，特别是在网络延迟较大时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;后续版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后续版本&#34;&gt;#&lt;/a&gt; 后续版本&lt;/h3&gt;
+&lt;h3 id=&#34;1-rdt21解决acknak损坏问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-rdt21解决acknak损坏问题&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;rdt2.1：解决 ACK/NAK 损坏问题&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：在 rdt2.0 中，如果 ACK 或 NAK 发生损坏，发送方无法判断接收方的状态，从而导致数据包的潜在重复或丢失。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;改进&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;序列号&lt;/strong&gt;：引入序列号来标记数据包的唯一性。每个数据包使用 0 或 1 的序列号，以便接收方可以检测到重复的数据包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冗余 ACK&lt;/strong&gt;：如果 ACK 或 NAK 损坏，发送方会根据超时机制重发数据包。接收方在接收相同序列号的数据包时会丢弃重复的数据包，但仍会发送冗余 ACK。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态机调整&lt;/strong&gt;：发送方和接收方都需要跟踪序列号，发送方根据接收的 ACK 或 NAK 来判断是否需要重传。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;发送方发送带序列号的包，并等待 ACK 或 NAK。&lt;/li&gt;
+&lt;li&gt;接收方收到包后，根据校验和检测是否有错误。若无错误，发送 ACK，若有错误，发送 NAK。&lt;/li&gt;
+&lt;li&gt;若 ACK/NAK 损坏，发送方超时后会重发数据包。接收方通过序列号来丢弃重复包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：rdt2.1 通过序列号和 ACK 重传解决了 ACK/NAK 损坏的问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-rdt22仅使用ack无nak&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-rdt22仅使用ack无nak&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;rdt2.2：仅使用 ACK，无 NAK&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：rdt2.1 依赖 ACK 和 NAK 双重反馈，但在实际网络中，使用 NAK 可能会引入额外的复杂性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改进&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;纯 ACK 机制&lt;/strong&gt;：取消了 NAK，接收方只使用 ACK 来响应。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冗余 ACK 机制&lt;/strong&gt;：如果接收方检测到数据包有错误（如校验和失败），则不发送 NAK，而是重复发送上一条 ACK。发送方在接收冗余 ACK 后，将重传数据包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工作流程&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;发送方发送带序列号的包，并等待 ACK。&lt;/li&gt;
+&lt;li&gt;接收方若检测到包无错误，则发送 ACK。如果检测到包有错误，发送上一个包的 ACK（即冗余 ACK）。&lt;/li&gt;
+&lt;li&gt;发送方在接收到冗余 ACK 时，将当前包重发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：rdt2.2 避免了 NAK 的使用，简化了接收方逻辑。该版本仅依赖 ACK，进一步提高了效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-rdt30处理信道丢包问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-rdt30处理信道丢包问题&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;rdt3.0：处理信道丢包问题&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：rdt2.x 版本解决了比特错误问题，但假设信道不会丢包。然而，在实际网络中，数据包可能会丢失，因此 rdt2.x 无法保证在丢包信道上的可靠性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改进&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;超时重传机制&lt;/strong&gt;：rdt3.0 在发送方引入了超时重传机制。发送方在发送数据包后，启动一个定时器。如果在超时时间内未收到 ACK，则自动重传数据包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;序列号&lt;/strong&gt;：继续使用序列号来检测重复包，确保接收方不会交付重复数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工作流程&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;发送方发送带序列号的包，并等待 ACK，同时启动定时器。&lt;/li&gt;
+&lt;li&gt;接收方收到包后，若无错误，则发送 ACK 并交付数据；若有错误，发送冗余 ACK。&lt;/li&gt;
+&lt;li&gt;若发送方在超时时间内未收到 ACK，自动重传数据包。&lt;/li&gt;
+&lt;li&gt;接收方通过序列号丢弃重复包，保证数据无重复交付。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：rdt3.0 通过超时重传机制解决了丢包问题，能够在信道丢包和比特错误情况下实现可靠传输。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;总结-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-2&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;rdt2.1&lt;/strong&gt;：在 rdt2.0 的基础上引入序列号，用 ACK 和 NAK 解决确认消息损坏的问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rdt2.2&lt;/strong&gt;：去除 NAK，仅使用 ACK 机制，通过冗余 ACK 实现重传，简化了协议。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rdt3.0&lt;/strong&gt;：引入超时重传机制，解决了信道丢包的问题，实现了在丢包和比特错误信道上的可靠数据传输。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;rdt3.0 是这几个版本中最可靠的协议，适用于丢包和比特错误的复杂信道环境。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2024/10/25/game-engine/unity/unityCompetition/%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81%E5%88%B0%E7%A0%81%E4%BA%91/</guid>
             <title>创建并添加代码到gitee</title>
@@ -189,14 +863,53 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2024/10/17/game-engine/unity/unityBasics/unity%E4%B8%AD%E8%8A%82%E7%82%B9%E5%9B%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-            <title>unity节点图使用</title>
-            <link>http://example.com/2024/10/17/game-engine/unity/unityBasics/unity%E4%B8%AD%E8%8A%82%E7%82%B9%E5%9B%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <guid isPermalink="true">http://example.com/2024/10/17/game-engine/unity/unityBasics/unity-2d%20%E5%8A%A8%E7%94%BB/</guid>
+            <title>unity-2d 动画</title>
+            <link>http://example.com/2024/10/17/game-engine/unity/unityBasics/unity-2d%20%E5%8A%A8%E7%94%BB/</link>
             <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
             <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
             <category term="unity基础" scheme="http://example.com/categories/game-engine/unity/unityBasics/" />
             <pubDate>Thu, 17 Oct 2024 15:15:32 +1100</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;unity中节点图的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity中节点图的使用&#34;&gt;#&lt;/a&gt; unity 中节点图的使用&lt;/h2&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;unity-2d-动画&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-2d-动画&#34;&gt;#&lt;/a&gt; unity-2d 动画&lt;/h2&gt;
+&lt;h3 id=&#34;1切割原画&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1切割原画&#34;&gt;#&lt;/a&gt; 1. 切割原画&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;通过组件 editor 打开编辑界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E5%99%A8.png&#34; alt&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;通过切割将整张图切割成我们需要的大小，并导入到 assets 文件夹&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E5%88%87%E5%89%B2.png&#34; alt&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2创建动画&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2创建动画&#34;&gt;#&lt;/a&gt; 2. 创建动画&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建动画文件&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB.png&#34; alt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;挑选适合的图片&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%8C%91%E9%80%89%E5%8A%A8%E7%94%BB.png&#34; alt&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将挑选好的图片拖入动画中&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%8B%96%E5%85%A5.png&#34; alt&gt;&lt;br&gt;
+并设置适合的帧率，至此动画初步完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不同的行为控制不同的动画&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB%E4%BA%8B%E4%BB%B6.png&#34; alt&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%B7%BB%E5%8A%A0%E4%BA%8B%E4%BB%B6%E5%8F%98%E6%8D%A2%E5%8A%A8%E7%94%BB.png&#34; alt&gt;&lt;br&gt;
+例如这里 通过双向行为控制角色是否在移动来添加不同的动画&lt;br&gt;
+&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/unity%2Funity2d%2F%E6%B7%BB%E5%8A%A0%E6%9D%A1%E4%BB%B6.png&#34; alt&gt;&lt;br&gt;
+同时在对象身上添加判定条件&lt;br&gt;
+此时 再进入程序内&lt;br&gt;
+ &lt;figure class=&#34;highlight c#&#34;&gt;&lt;figcaption&gt;&lt;span&gt;row&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;player&lt;/span&gt; : &lt;span class=&#34;title&#34;&gt;MonoBehaviour&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; Rigidbody2D rb;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; Animator animator;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; moveSpeed;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    [&lt;span class=&#34;meta&#34;&gt;SerializeField&lt;/span&gt;] &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; jumpforce;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;float&lt;/span&gt; xinput;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// Start is called before the first frame update|&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Start&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb = GetComponent&amp;lt;Rigidbody2D&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        animator = GetComponentInChildren&amp;lt;Animator&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// Update is called once per frame&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Update&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        Movement();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        CheckInput();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        AnimatorController();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;CheckInput&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        xinput = Input.GetAxisRaw(&lt;span class=&#34;string&#34;&gt;&amp;quot;Horizontal&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (Input.GetKeyDown(KeyCode.Space))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Jump();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            Debug.Log(&lt;span class=&#34;string&#34;&gt;&amp;quot;jump&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Movement&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb.velocity = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector2(xinput * moveSpeed, rb.velocity.y);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Jump&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        rb.velocity = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; Vector2(rb.velocity.y, jumpforce);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;AnimatorController&lt;/span&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt; moving = rb.velocity.x != &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        animator.SetBool(&lt;span class=&#34;string&#34;&gt;&amp;quot;moving&amp;quot;&lt;/span&gt;, moving);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+ 通过 &lt;code&gt;[SerializeField] private Animator animator;&lt;/code&gt;  创建对象&lt;br&gt;
+ &lt;code&gt;animator = GetComponentInChildren&amp;lt;Animator&amp;gt;();&lt;/code&gt;  获取到子类中的动画&lt;br&gt;
+ &lt;code&gt;moving = rb.velocity.x != 0;animator.SetBool(&amp;quot;moving&amp;quot;, moving);&lt;/code&gt; &lt;br&gt;
+ 并通过判定向量来控制 moving 的变化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
@@ -1217,7 +1930,7 @@
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="计算机网络" scheme="http://example.com/categories/computer/networks/" />
             <pubDate>Thu, 19 Sep 2024 20:01:35 +1000</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;链路状态ls和距离向量dv算法介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链路状态ls和距离向量dv算法介绍&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;链路状态（LS）和距离向量（DV）算法介绍&lt;/span&gt;&lt;/h1&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;链路状态ls和距离向量dv算法介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链路状态ls和距离向量dv算法介绍&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;链路状态（LS）和距离向量（DV）算法介绍&lt;/span&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;1-链路状态算法link-state-ls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-链路状态算法link-state-ls&#34;&gt;#&lt;/a&gt; 1. 链路状态算法（Link State, LS）&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
@@ -1296,88 +2009,135 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;总结来说，LS 算法适合对全网有更高掌控需求的大型网络，DV 算法则更适合小型或中型网络中简单的路径选择需求。&lt;/p&gt;
-&lt;h1 id=&#34;分层路由hierarchical-routing&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分层路由hierarchical-routing&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;分层路由 (Hierarchical routing)&lt;/span&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;1as&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1as&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzEuQVM=&#34;&gt;1.AS&lt;/span&gt; (autonomous systems)&lt;/h2&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/game-engine/ue/hello-world/</guid>
-            <title>Hello World</title>
-            <link>http://example.com/2024/09/17/game-engine/ue/hello-world/</link>
-            <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
-            <category term="ue" scheme="http://example.com/categories/game-engine/ue/" />
-            <pubDate>Tue, 17 Sep 2024 14:09:35 +1000</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;I LOVE YOU&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/temeplete/temeplete1/</guid>
-            <title>wwwww</title>
-            <link>http://example.com/2024/09/17/temeplete/temeplete1/</link>
-            <pubDate>Tue, 17 Sep 2024 10:18:17 +1000</pubDate>
-            <description><![CDATA[ &lt;p&gt;wwqswdsadwq&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/computer/networks/hello-world/</guid>
-            <title>Hello World</title>
-            <link>http://example.com/2024/09/17/computer/networks/hello-world/</link>
-            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
-            <category term="计算机网络" scheme="http://example.com/categories/computer/networks/" />
-            <pubDate>Tue, 17 Sep 2024 01:34:21 +1000</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;I LOVE YOU&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2024/09/17/computer/it-projectManage/hello-world/</guid>
-            <title>Hello World</title>
-            <link>http://example.com/2024/09/17/computer/it-projectManage/hello-world/</link>
-            <category term="计算机科学" scheme="http://example.com/categories/computer/" />
-            <category term="IT项目管理" scheme="http://example.com/categories/computer/it-projectManage/" />
-            <pubDate>Tue, 17 Sep 2024 00:15:39 +1000</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;I LOVE YOU&lt;/p&gt;
+&lt;h2 id=&#34;分层路由hierarchical-routing&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分层路由hierarchical-routing&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;label danger&#34;&gt;分层路由 (Hierarchical routing)&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;网络规模与分层的必要性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互联网包含数亿个目的地，无法在每个路由器中存储所有目的地的路由信息。同时，路由信息的交换会消耗大量带宽。为了解决这些问题，互联网采用了分层路由的结构，将网络划分为若干自治系统（AS），以便集中管理​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自治系统（AS）的作用&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个自治系统由单一的管理机构控制，可以自主选择使用的路由协议和策略。每个 AS 内部使用一种 “域内路由协议”（如 OSPF、RIP），而跨越不同 AS 的通信则依赖 “域间路由协议”（如 BGP）​。&lt;/li&gt;
+&lt;li&gt;在 AS 的边界上使用 “网关路由器”（Gateway Router）负责连接不同的 AS，使数据在不同 AS 之间转发​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;域内与域间路由的协作&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;** 域内路由协议（Intra-AS Routing Protocol）** 负责计算 AS 内部的路径。通过这些协议，每个 AS 可以独立确定到本 AS 内所有目的地的最佳路由。&lt;/li&gt;
+&lt;li&gt;** 域间路由协议（Inter-AS Routing Protocol）** 负责跨 AS 的路由选择。每个 AS 与其邻居 AS 共享可达性信息，选择最合适的跨域路径。比如，AS1 的一个路由器在收到目标在其他 AS 的消息时，首先会选择最合适的网关将数据包转发至下一个 AS​​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;分层路由的优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;减少复杂度&lt;/strong&gt;：路由信息被划分到不同层级，每个 AS 仅需管理内部的路由，大大减少了每个路由器的负担。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;管理自主性&lt;/strong&gt;：每个 AS 可自主设置策略，比如可以决定是否承载特定类型的流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可扩展性强&lt;/strong&gt;：分层结构支持互联网的扩展，不会因网络规模的增加导致路由器超负荷​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通过这种分层路由方式，互联网能够更有效地管理和转发数据，确保在全球范围内实现快速且高效的通信。&lt;/p&gt;
+&lt;h3 id=&#34;hot-potato-routing&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hot-potato-routing&#34;&gt;#&lt;/a&gt; Hot Potato Routing&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hot Potato Routing&lt;/strong&gt;（烫手山芋路由）是一种在网络中进行数据包转发的路由策略，旨在将数据包快速传递给下一个网络节点，以尽快将数据包 “推” 出当前网络。这种策略通常在没有明确最优路径选择，或路径延迟相近的情况下使用，常见于自治系统（AS）之间的数据包转发中。&lt;/p&gt;
+&lt;p&gt;Hot Potato Routing 的核心思想是&lt;strong&gt;尽快将数据包交给下一个路由器或自治系统&lt;/strong&gt;，而不是试图找到某条具体的最短路径。换句话说，路由器会选择离自己最近的出口转发数据包，而不一定是整体路径上最优的出口。这种方式可以减少数据包在本地网络中的延迟和资源占用。&lt;/p&gt;
+&lt;h4 id=&#34;1-实现流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-实现流程&#34;&gt;#&lt;/a&gt; 1. 实现流程&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;邻居成本计算&lt;/strong&gt;：当数据包需要从源 AS 传递到目的 AS 时，源 AS 中的路由器首先会计算到达其所有出口网关的路径成本（例如延迟或跳数）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择最接近的网关&lt;/strong&gt;：路由器选择成本最低的出口网关，将数据包转发给离它最近的网关，而不再考虑数据包后续的详细路径。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据包交接&lt;/strong&gt;：一旦数据包被转发到出口网关，它便会离开源 AS，进入下一个 AS 或网络。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;2-优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-优缺点&#34;&gt;#&lt;/a&gt; 2. 优缺点&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;降低网络资源占用&lt;/strong&gt;：数据包尽快离开当前网络，减少了在本地网络中占用的带宽和计算资源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少转发延迟&lt;/strong&gt;：选择最近的出口可以减少在本地 AS 内的传输延迟，从而加快数据包的传输速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简单易实现&lt;/strong&gt;：不需要维护复杂的全局路由信息，适合大型分布式网络。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;路径非最优&lt;/strong&gt;：数据包并未按照全局最短路径转发，可能会绕路，增加传输时间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨 AS 的成本可能更高&lt;/strong&gt;：数据包可能会被交给距离最近但非最优的 AS 网关，导致数据包在其他 AS 中的传输成本增加。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;依赖邻居策略&lt;/strong&gt;：邻近 AS 的转发策略可能与源 AS 不同，增加了路由的不确定性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3应用场景&#34;&gt;#&lt;/a&gt; 3. 应用场景&lt;/h4&gt;
+&lt;p&gt;Hot Potato Routing 适用于&lt;strong&gt;大型分布式网络&lt;/strong&gt;和&lt;strong&gt;多 AS 互连的网络&lt;/strong&gt;，如 ISP（Internet Service Provider）间的路由选择。因为不同 ISP 之间可能没有直接的链路质量信息或最优路径协议，它们倾向于使用 Hot Potato Routing 将数据包尽快转发给下一个网络。这种策略也用于减少自己的网络资源消耗，把负担转移给邻居 ISP。&lt;/p&gt;
+&lt;h2 id=&#34;routing-in-the-internet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#routing-in-the-internet&#34;&gt;#&lt;/a&gt; Routing in the Internet&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;RIP（Routing Information Protocol）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：RIP 是一种基于距离向量（Distance Vector）的路由协议，使用跳数（hop count）作为距离度量，每个链路的跳数成本为 1，最大跳数为 15。超过 15 跳表示目的地不可达​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;信息更新&lt;/strong&gt;：RIP 每 30 秒向邻居发送一次距离向量表（称为广告消息），广告消息包含最多 25 个目标子网的跳数信息，更新邻居的路由信息​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：适用于小型网络，由于其最大跳数限制，不适合大规模的互联网环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;OSPF（Open Shortest Path First）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：OSPF 是一种链路状态（Link State）路由协议，每个路由器都通过链路状态广告（LSA）了解网络拓扑，使用 Dijkstra 算法计算最短路径。OSPF 是开源协议，允许在整个自治系统（AS）中进行拓扑广播​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高级功能&lt;/strong&gt;：OSPF 支持路径认证（保证安全性）、相同成本路径（允许多路径负载均衡）、多种服务类型的链路成本以及单播和多播的集成。它还支持分层 OSPF（Hierarchical OSPF）用于大型域中的分区管理​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：适合大型企业网络和数据中心，因其精确的路径计算和灵活的策略选择受到青睐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BGP（Border Gateway Protocol）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：BGP 是事实上的互联网域间（Inter-domain）路由协议，通过边界网关（Border Gateway）连接不同的 AS。BGP 分为外部 BGP（eBGP）和内部 BGP（iBGP），分别用于 AS 之间和 AS 内部的路由信息传播​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;路由策略&lt;/strong&gt;：BGP 路由基于策略而非纯粹的最短路径。例如，一个 AS 可以选择不传递商业流量或避免特定路径。BGP 的主要属性包括 AS 路径（AS-PATH）和下一跳（NEXT-HOP），允许路由器基于策略接受或拒绝路径​。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：适用于全球互联网，BGP 被称为 “互联网的粘合剂”，通过政策控制和子网可达性信息的传播，使得各 AS 能够互通数据并实现复杂的跨域通信​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RIP&lt;/strong&gt; 适用于小型网络，简单但跳数有限。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OSPF&lt;/strong&gt; 适合自治系统内部，精确高效，支持高级功能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BGP&lt;/strong&gt; 是跨 AS 的核心协议，基于策略路由，适合全球互联网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bgp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bgp&#34;&gt;#&lt;/a&gt; BGP&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BGP（Border Gateway Protocol）&lt;/strong&gt; 被介绍为互联网的主要&lt;strong&gt;域间路由协议&lt;/strong&gt;，常用于自治系统（AS）之间的通信，确保不同网络能够互通。BGP 被称为 “互联网的粘合剂”，其主要特点和运作机制如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BGP 的基本功能&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BGP 为每个 AS 提供了一种交换可达性信息的机制。通过外部 BGP（eBGP），一个 AS 能够从邻居 AS 接收子网的可达性信息；通过内部 BGP（iBGP），该 AS 内部的所有路由器可以共享这些信息​。&lt;/li&gt;
+&lt;li&gt;通过这种方式，BGP 可以将互联网中各个网络连接起来，使得一个 AS 能够将其存在公告给其他 AS（例如：“我在这里”），并为其路由器提供通往其他网络的路径​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;路径属性与路由选择&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个 BGP 路径包含多个属性，包括 AS 路径（AS-PATH）和下一跳（NEXT-HOP）。AS-PATH 记录了通过的 AS 列表，路由器根据 AS-PATH 来选择更短的路径。&lt;/li&gt;
+&lt;li&gt;NEXT-HOP 指明数据包的下一个目的 AS 的具体路由器，接收路由通告的网关路由器可以使用 “导入策略” 选择是否接受该路径，比如拒绝经过某个特定 AS 的路径​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;策略驱动的路由&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与域内协议（如 OSPF）追求最短路径不同，BGP 关注的是策略。例如，一个教育机构的网络可以选择不传递商业流量，而一个企业可以选择从成本更低的 ISP 接收流量。&lt;/li&gt;
+&lt;li&gt;BGP 的策略可以非常细化，支持复杂的商业和政治考量，例如限制某些流量经过竞争对手的网络​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;路由选择的顺序&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BGP 在选择路由时按照以下优先级：&lt;strong&gt;本地优先级 / 策略&lt;/strong&gt; &amp;gt; &lt;strong&gt;最短 AS-PATH&lt;/strong&gt; &amp;gt; &lt;strong&gt;最近的 NEXT-HOP&lt;/strong&gt;（即 “烫手山芋路由”）​。&lt;/li&gt;
+&lt;li&gt;当出现多个同等优质的路径时，BGP 将选择最近的网关将数据包快速推出本 AS，从而减少自身网络的负担​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BGP 广泛应用于 ISP 之间的网络连接和大型企业的跨地域网络。由于 BGP 允许基于策略的路由选择，它成为全球互联网通信的关键协议之一​。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;BGP 的策略导向特性使其能够有效地连接全球的自治系统，适应多变的互联网需求。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
