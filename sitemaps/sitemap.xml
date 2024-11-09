@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F07%2Fgame-engine%2Funity%2FunityBasics%2FMesh%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%2520%25E6%25B1%25BD%25E8%25BD%25A6%25E5%259C%25B0%25E5%25BD%25A2%25E5%2588%259B%25E5%25BB%25BA%2F</loc>
+    
+    <lastmod>2024-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F08%2F03%2Fgame-engine%2Funity%2FunityBasics%2F%25E6%259F%258F%25E6%259E%2597%25E5%2599%25AA%25E5%25A3%25B0%2F</loc>
+    
+    <lastmod>2024-11-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F04%2Fcomputer%2Fdatabase%2Flec12%2520Query%2520Processing%2520and%2520Evaluation%2F</loc>
+    
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F03%2Fcomputer%2Fdatabase%2Flec11%2520Storage%2520and%2520Indexing%2F</loc>
+    
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http%3A%2F%2Fexample.com%2F2024%2F09%2F04%2Fgame-engine%2Funity%2FunityBasics%2F%25E4%25B8%2580%25E4%25BA%259B%25E5%258A%259F%25E8%2583%25BD%25E5%2592%258C%25E4%25B8%258D%25E6%2587%2582%25E7%259A%2584%25E7%2582%25B9%25E7%259A%2584%25E8%25AE%25B0%25E5%25BD%2595%2F</loc>
     
     <lastmod>2024-11-04</lastmod>
@@ -21,15 +57,6 @@
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2F2024%2F03%2F01%2Fcomputer%2Ffront%2Fprattle%2Fvue%25E4%25B8%25AD%25E7%259A%2584%25E6%258F%2592%25E6%25A7%25BD%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%25E5%2592%258Cvuex%25E7%259A%2584%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%258E%25E4%25BD%25BF%25E7%2594%25A8%2F</loc>
-    
-    <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F03%2Fcomputer%2Fdatabase%2Flec11%2520Storage%2520and%2520Indexing%2F</loc>
     
     <lastmod>2024-11-04</lastmod>
     
@@ -724,7 +751,7 @@
 
   <url>
     <loc>http%3A%2F%2Fexample.com</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -734,105 +761,105 @@
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fdatabase%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fit-projectManage%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fnetworks%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Fue%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Freact%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fnode%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FJavaScript%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FtypeScript%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fprattle%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityBasics%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityCompetition%2F</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
