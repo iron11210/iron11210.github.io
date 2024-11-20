@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F10%2Fgame-engine%2Funity%2FunityBasics%2F%25E6%2591%2584%25E5%2583%258F%25E6%259C%25BA%25E8%25B7%259F%25E9%259A%258F%2F</loc>
+    
+    <lastmod>2024-11-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http%3A%2F%2Fexample.com%2F2024%2F11%2F07%2Fgame-engine%2Funity%2FunityBasics%2FMesh%25E7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%2520%25E6%25B1%25BD%25E8%25BD%25A6%25E5%259C%25B0%25E5%25BD%25A2%25E5%2588%259B%25E5%25BB%25BA%2F</loc>
     
     <lastmod>2024-11-08</lastmod>
@@ -751,7 +760,7 @@
 
   <url>
     <loc>http%3A%2F%2Fexample.com</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -761,105 +770,105 @@
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fdatabase%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fit-projectManage%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fnetworks%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Fue%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Freact%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fnode%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FJavaScript%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FtypeScript%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fprattle%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityBasics%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityCompetition%2F</loc>
-    <lastmod>2024-11-09</lastmod>
+    <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
