@@ -2,9 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FComputationalGeometry%2Flec5%2520Range%2520Searching%25201%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F12%2F06%2Fgame-engine%2Funity%2F%25E9%259D%25A2%25E7%25BB%258F%2F%25E6%25AC%25A2%25E5%258A%25A8%25E7%25A7%2591%25E6%258A%2580%25E4%25B8%2580%25E9%259D%25A2(hr%25E9%259D%25A2)%2F</loc>
     
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F12%2F06%2Fgame-engine%2Funity%2F%25E9%259D%25A2%25E7%25BB%258F%2F%25E5%2590%2588%25E8%2582%25A5%25E5%25B8%25B8%25E6%2598%25A5%25E8%2597%25A4%2F</loc>
+    
+    <lastmod>2025-12-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F12%2F06%2Fgame-engine%2Funity%2F%25E9%259D%25A2%25E7%25BB%258F%2F%25E7%258E%258B%25E7%2589%258C%25E6%25B8%25B8%25E6%2588%258F%25E4%25B8%2580%25E9%259D%25A2%2F</loc>
+    
+    <lastmod>2025-12-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F11%2F12%2Fgame-engine%2Funity%2FAssetBundle%2FBuilder%25E6%25A0%25B8%25E5%25BF%2583%25E5%2587%25BD%25E6%2595%25B0%25E4%25B9%258B%25E4%25B8%2580%2520Collect%2F</loc>
+    
+    <lastmod>2025-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F11%2F11%2Fgame-engine%2Funity%2FAssetBundle%2FProfiler%25E6%2580%25A7%25E8%2583%25BD%25E5%2588%2586%25E6%259E%2590%25E5%25B7%25A5%25E5%2585%25B7%2F</loc>
+    
+    <lastmod>2025-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F07%2F11%2Fcomputer%2FAlgorithm%2F%25E7%25AE%2597%25E6%25B3%2595%25E7%259A%2584%25E4%25B8%2580%25E4%25BA%259B%25E6%2580%25BB%25E7%25BB%2593%2F</loc>
+    
+    <lastmod>2025-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F07%2F24%2Fcomputer%2FLua%2FLua%25E5%259F%25BA%25E7%25A1%2580%2F</loc>
+    
+    <lastmod>2025-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F05%2Fcomputer%2FStochasticAlgorithm%2F%25E9%259A%258F%25E6%259C%25BA%25E7%25AE%2597%25E6%25B3%2595%25E5%259F%25BA%25E7%25A1%2580%25EF%25BC%259A%25E4%25B8%2580%25E4%25BA%259B%25E7%25A6%25BB%25E6%2595%25A3%25E6%2595%25B0%25E5%25AD%25A6%25E7%259A%2584%25E6%25A6%2582%25E5%25BF%25B5%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2520(2)%2F</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F06%2Fcomputer%2FStochasticAlgorithm%2F%25E4%25B8%2580%25E4%25BA%259B%25E9%2580%259A%25E7%2594%25A8%25E7%259A%2584%25E7%259F%25A5%25E8%25AF%2586%2F</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F14%2Fcomputer%2FStochasticAlgorithm%2Flec11%2520Learning%2520and%2520testingprobability%2520distributions%2F</loc>
+    
+    <lastmod>2025-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +94,115 @@
   <url>
     <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F27%2Fcomputer%2FComputationalGeometry%2F%25E4%25B8%2580%25E4%25BA%259B%25E5%259F%25BA%25E7%25A1%2580%25E7%259A%2584%25E7%259F%25A5%25E8%25AF%2586%2F</loc>
     
-    <lastmod>2025-06-11</lastmod>
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F24%2Fcomputer%2FComputationalGeometry%2Flec9%2520Planar%2520Point%2520Location%2F</loc>
+    
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F25%2Fcomputer%2FComputationalGeometry%2Flec10%2520%25E5%2587%25A0%25E4%25BD%2595%25E9%2580%25BC%25E8%25BF%2591%25E7%25AE%2597%25E6%25B3%2595(Geometric%2520approximation%2520algorithms)%2F</loc>
+    
+    <lastmod>2025-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F27%2Fcomputer%2FComputationalGeometry%2Flec4%2520Linear%2520Programming%2F</loc>
+    
+    <lastmod>2025-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F14%2Fcomputer%2FStochasticAlgorithm%2Flec9%2520%25E4%25B8%25AA%25E4%25BA%25BA%25E6%2580%25BB%25E7%25BB%2593%25E7%2589%2588%2F</loc>
+    
+    <lastmod>2025-06-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F14%2Fcomputer%2FStochasticAlgorithm%2Flec8%2520%25E6%25B5%2581%25E5%25BC%258F%25E7%25AE%2597%25E6%25B3%2595%2F</loc>
+    
+    <lastmod>2025-06-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FStochasticAlgorithm%2Flec4%2520Derandomisation%2520%25E5%258E%25BB%25E9%259A%258F%25E6%259C%25BA%25E5%258C%2596%2F</loc>
+    
+    <lastmod>2025-06-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F13%2Fcomputer%2FStochasticAlgorithm%2F%25E8%25BF%2598%25E8%25A6%2581%25E5%2586%2599%25E7%259A%2584%25E9%25A2%2598%25E7%259B%25AE%2F</loc>
+    
+    <lastmod>2025-06-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F05%2Fcomputer%2FStochasticAlgorithm%2Flec2%2F</loc>
+    
+    <lastmod>2025-06-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FStochasticAlgorithm%2Flec10%2520Linear%2520Programmingand%2520Randomised%2520Rounding%2F</loc>
+    
+    <lastmod>2025-06-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FStochasticAlgorithm%2Flec5%2520Graph%2520algorithms%25EF%25BC%2588%25E4%25B8%25AA%25E4%25BA%25BA%25E6%2580%25BB%25E7%25BB%2593%25EF%25BC%2589%2F</loc>
+    
+    <lastmod>2025-06-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F06%2Fcomputer%2FComputationalGeometry%2Flec6%2520Range%2520Searching%25202%2F</loc>
+    
+    <lastmod>2025-06-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FComputationalGeometry%2Flec5%2520Range%2520Searching%25201%2F</loc>
+    
+    <lastmod>2025-06-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -146,15 +335,6 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F25%2Fcomputer%2FComputationalGeometry%2Flec10%2520%25E5%2587%25A0%25E4%25BD%2595%25E9%2580%25BC%25E8%25BF%2591%25E7%25AE%2597%25E6%25B3%2595(Geometric%2520approximation%2520algorithms)%2F</loc>
-    
-    <lastmod>2025-05-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F27%2Fcomputer%2FComputationalGeometry%2Flec9%2520Planar%2520Point%2520Location%2520%25E4%25B8%25AA%25E4%25BA%25BA%25E6%2580%259D%25E8%25B7%25AF%25E7%2589%2588%2F</loc>
     
     <lastmod>2025-05-27</lastmod>
@@ -173,15 +353,6 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F24%2Fcomputer%2FComputationalGeometry%2Flec9%2520Planar%2520Point%2520Location%2F</loc>
-    
-    <lastmod>2025-05-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F24%2Fcomputer%2FComputationalGeometry%2Flec8%2520Arrangements%2520and%2520Duality%2F</loc>
     
     <lastmod>2025-05-24</lastmod>
@@ -191,27 +362,9 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F05%2Fcomputer%2FStochasticAlgorithm%2F%25E9%259A%258F%25E6%259C%25BA%25E7%25AE%2597%25E6%25B3%2595%25E5%259F%25BA%25E7%25A1%2580%25EF%25BC%259A%25E4%25B8%2580%25E4%25BA%259B%25E7%25A6%25BB%25E6%2595%25A3%25E6%2595%25B0%25E5%25AD%25A6%25E7%259A%2584%25E6%25A6%2582%25E5%25BF%25B5%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2520(2)%2F</loc>
-    
-    <lastmod>2025-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F05%2Fcomputer%2FStochasticAlgorithm%2Flec6%2F</loc>
     
     <lastmod>2025-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F02%2Fcomputer%2FDataAnalyze%2Flec8%2520Principles%2520ofData%2520Science%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2520(2)%2F</loc>
-    
-    <lastmod>2025-05-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -236,7 +389,16 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F24%2Fcomputer%2FComputationalGeometry%2Flec7%2520Voronoi%2520Diagram%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2520(2)%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F02%2Fcomputer%2FDataAnalyze%2Flec8%2520Principles%2520ofData%2520Science%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2520(2)%2F</loc>
+    
+    <lastmod>2025-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F12%2Fcomputer%2FComputationalGeometry%2Flec7%2520Voronoi%2520Diagram%2F</loc>
     
     <lastmod>2025-05-07</lastmod>
     
@@ -245,18 +407,18 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F06%2Fcomputer%2FComputationalGeometry%2Flec7%2520Voronoi%2520Diagram%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F17%2Fcomputer%2FStochasticAlgorithm%2Flec12%2520%25E4%25B8%2593%25E5%25AE%25B6%25E3%2580%2582%25E3%2580%2582%2F</loc>
     
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-04-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F05%2F06%2Fcomputer%2FStochasticAlgorithm%2F%25E4%25B8%2580%25E4%25BA%259B%25E9%2580%259A%25E7%2594%25A8%25E7%259A%2584%25E7%259F%25A5%25E8%25AF%2586%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F06%2F17%2Fcomputer%2FStochasticAlgorithm%2Flec9%2520-%2520%25E5%2589%25AF%25E6%259C%25AC%2F</loc>
     
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-04-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -266,15 +428,6 @@
     <loc>http%3A%2F%2Fexample.com%2F2025%2F04%2F30%2Fcomputer%2FStochasticAlgorithm%2Flec9%2F</loc>
     
     <lastmod>2025-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F05%2Fcomputer%2FStochasticAlgorithm%2Flec2%2F</loc>
-    
-    <lastmod>2025-04-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -299,15 +452,6 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F03%2F27%2Fcomputer%2FComputationalGeometry%2Flec4%2520Linear%2520Programming%2F</loc>
-    
-    <lastmod>2025-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http%3A%2F%2Fexample.com%2F2025%2F01%2F23%2Fgame-engine%2Funity%2FunityProject01%2F%25E5%25AD%2598%25E6%25A1%25A3%25E7%25B3%25BB%25E7%25BB%259F%2F</loc>
     
     <lastmod>2025-01-26</lastmod>
@@ -317,7 +461,7 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2024%2F10%2F31%2Fgame-engine%2Funity%2FunityProject01%2Funity%2520%25E5%258A%25A8%25E6%2580%2581%25E8%25A1%2580%25E6%259D%25A1%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F10%2F30%2Fgame-engine%2Funity%2FunityProject01%2Funity%2520%25E5%258A%25A8%25E6%2580%2581%25E8%25A1%2580%25E6%259D%25A1%2F</loc>
     
     <lastmod>2025-01-23</lastmod>
     
@@ -353,7 +497,7 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2025%2F01%2F19%2Fgame-engine%2Funity%2FunityProject01%2F%25E8%2583%258C%25E5%258C%2585%25E7%25B3%25BB%25E7%25BB%259F%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2025%2F01%2F18%2Fgame-engine%2Funity%2FunityProject01%2F%25E8%2583%258C%25E5%258C%2585%25E7%25B3%25BB%25E7%25BB%259F%2F</loc>
     
     <lastmod>2025-01-19</lastmod>
     
@@ -1046,7 +1190,7 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2024%2F09%2F17%2Fcomputer%2Fnetworks%2Fhello-world%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F09%2F16%2Fcomputer%2Fnetworks%2Fhello-world%2F</loc>
     
     <lastmod>2024-10-17</lastmod>
     
@@ -1082,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2F2024%2F09%2F17%2Fcomputer%2Fit-projectManage%2Fhello-world%2F</loc>
+    <loc>http%3A%2F%2Fexample.com%2F2024%2F09%2F16%2Fcomputer%2Fit-projectManage%2Fhello-world%2F</loc>
     
     <lastmod>2024-10-17</lastmod>
     
@@ -1147,7 +1291,7 @@
 
   <url>
     <loc>http%3A%2F%2Fexample.com</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1157,140 +1301,140 @@
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2FComputationalGeometry%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2FStochasticAlgorithm%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2FDataAnalyze%2F</loc>
-    <lastmod>2025-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fdatabase%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2F%25E6%2595%25B0%25E6%258D%25AE%25E7%25BB%2593%25E6%259E%2584%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fit-projectManage%2F</loc>
-    <lastmod>2025-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fnetworks%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fdatabase%2F</loc>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fit-projectManage%2F</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Fnetworks%2F</loc>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FJavaScript%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Fue%2F</loc>
-    <lastmod>2025-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fnode%2F</loc>
-    <lastmod>2025-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Freact%2F</loc>
-    <lastmod>2025-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FtypeScript%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fprattle%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Fnode%2F</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2Freact%2F</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fcomputer%2Ffront%2FtypeScript%2F</loc>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityBasics%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityCompetition%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http%3A%2F%2Fexample.com%2Fcategories%2Fgame-engine%2Funity%2FunityProject01%2F</loc>
-    <lastmod>2025-06-12</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
