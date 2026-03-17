@@ -7,24 +7,24 @@
     "home_page_url": "http://example.com",
     "items": [
         {
-            "id": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/",
-            "url": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/",
+            "id": "http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/",
+            "url": "http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/",
             "title": "",
             "date_published": "2025-12-06T13:12:19.117Z",
             "content_html": "<ol>\n<li>介绍一下自己</li>\n<li>这几个项目你是怎么完成的</li>\n<li>平时如何学习的，在学校是课程学的多还是自己学的多</li>\n<li>优点 / 缺点</li>\n<li>在团队中的作用</li>\n<li>你觉得你和我们公司哪些比较契合，有什么优势</li>\n<li>你如何看待 AI 会替代程序员这个说法</li>\n<li>目前有没有 offer，在哪里</li>\n<li>为什么考虑我们公司，我们公司和其他公司同时拥有 offer 的话你会选择哪里</li>\n</ol>\n",
             "tags": []
         },
         {
-            "id": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/",
-            "url": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/",
+            "id": "http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/",
+            "url": "http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/",
             "title": "",
             "date_published": "2025-12-06T13:11:36.231Z",
             "content_html": "<ol>\n<li>你觉得自己是一个怎么样的人？优点？缺点？</li>\n<li>你对未来的规划？</li>\n</ol>\n",
             "tags": []
         },
         {
-            "id": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/",
-            "url": "http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/",
+            "id": "http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/",
+            "url": "http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/",
             "title": "",
             "date_published": "2025-12-06T13:08:57.797Z",
             "content_html": "<ol>\n<li>项目是怎么做的，团队协作还是？如何分工，你和另一个程序是如何合作的？你负责什么部分？</li>\n<li>数学怎么样，还可以，来做一道题吧</li>\n<li>给我讲讲如何判断一个矩形和一个圆的关系，到代码层面呢？算法如何实现？</li>\n<li>c# 的 list 的查找事件复杂度？为什么？他的数据结构？</li>\n<li>在一个数组中删除元素的时间复杂度？</li>\n<li>投球同色消游戏，如何设计数据结构？如何获取暴露在外面的元素？</li>\n<li>敌人的扇形攻击范围，如何判定是否在攻击范围内？</li>\n</ol>\n",

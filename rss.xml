@@ -10,13 +10,13 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 06 Dec 2025 21:12:19 +0800</pubDate>
-        <lastBuildDate>Sat, 06 Dec 2025 21:12:19 +0800</lastBuildDate>
+        <pubDate>Sun, 07 Dec 2025 00:12:19 +1100</pubDate>
+        <lastBuildDate>Sun, 07 Dec 2025 00:12:19 +1100</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/</guid>
+            <guid isPermalink="true">http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/</guid>
             <title></title>
-            <link>http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/</link>
-            <pubDate>Sat, 06 Dec 2025 21:12:19 +0800</pubDate>
+            <link>http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/</link>
+            <pubDate>Sun, 07 Dec 2025 00:12:19 +1100</pubDate>
             <description><![CDATA[ &lt;ol&gt;
 &lt;li&gt;介绍一下自己&lt;/li&gt;
 &lt;li&gt;这几个项目你是怎么完成的&lt;/li&gt;
@@ -31,10 +31,10 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/</guid>
+            <guid isPermalink="true">http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/</guid>
             <title></title>
-            <link>http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/</link>
-            <pubDate>Sat, 06 Dec 2025 21:11:36 +0800</pubDate>
+            <link>http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/</link>
+            <pubDate>Sun, 07 Dec 2025 00:11:36 +1100</pubDate>
             <description><![CDATA[ &lt;ol&gt;
 &lt;li&gt;你觉得自己是一个怎么样的人？优点？缺点？&lt;/li&gt;
 &lt;li&gt;你对未来的规划？&lt;/li&gt;
@@ -42,10 +42,10 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</guid>
+            <guid isPermalink="true">http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</guid>
             <title></title>
-            <link>http://example.com/2025/12/06/game-engine/unity/%E9%9D%A2%E7%BB%8F/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</link>
-            <pubDate>Sat, 06 Dec 2025 21:08:57 +0800</pubDate>
+            <link>http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</link>
+            <pubDate>Sun, 07 Dec 2025 00:08:57 +1100</pubDate>
             <description><![CDATA[ &lt;ol&gt;
 &lt;li&gt;项目是怎么做的，团队协作还是？如何分工，你和另一个程序是如何合作的？你负责什么部分？&lt;/li&gt;
 &lt;li&gt;数学怎么样，还可以，来做一道题吧&lt;/li&gt;
@@ -64,7 +64,7 @@
             <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
             <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
             <category term="unity基础" scheme="http://example.com/categories/game-engine/unity/unityBasics/" />
-            <pubDate>Wed, 12 Nov 2025 00:00:00 +0800</pubDate>
+            <pubDate>Wed, 12 Nov 2025 03:00:00 +1100</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;1收集buildsetting中配置的所有新路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1收集buildsetting中配置的所有新路径&#34;&gt;#&lt;/a&gt; 1. 收集 BuildSetting 中配置的所有新路径&lt;/h2&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight c#&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 1️⃣ 收集所有在 BuildSetting 中配置的资源路径  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ms_CollectBuildSettingFileProfiler.Start();  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;HashSet&amp;lt;&lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt;&amp;gt; files = buildSetting.Collect();  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ms_CollectBuildSettingFileProfiler.Stop();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&#34;2收集每个文件的依赖关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2收集每个文件的依赖关系&#34;&gt;#&lt;/a&gt; 2. 收集每个文件的依赖关系&lt;/h2&gt;
@@ -116,7 +116,7 @@ Manifest 文件就像是打包的一个总帐本。因为打包之后的 AssetBu
             <category term="游戏引擎" scheme="http://example.com/categories/game-engine/" />
             <category term="unity" scheme="http://example.com/categories/game-engine/unity/" />
             <category term="unity基础" scheme="http://example.com/categories/game-engine/unity/unityBasics/" />
-            <pubDate>Tue, 11 Nov 2025 00:00:00 +0800</pubDate>
+            <pubDate>Tue, 11 Nov 2025 03:00:00 +1100</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;1为什么需要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1为什么需要&#34;&gt;#&lt;/a&gt; 1. 为什么需要？&lt;/h2&gt;
 &lt;p&gt;这个性能工具的作用是，能够让我们自己知道，每个阶段分别耗时多少，并且哪个阶段最慢，用了哪些步骤。&lt;/p&gt;
 &lt;h2 id=&#34;2核心&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2核心&#34;&gt;#&lt;/a&gt; 2. 核心&lt;/h2&gt;
@@ -148,14 +148,14 @@ Manifest 文件就像是打包的一个总帐本。因为打包之后的 AssetBu
             <guid isPermalink="true">http://example.com/2025/07/24/computer/Lua/Lua%E5%9F%BA%E7%A1%80/</guid>
             <title></title>
             <link>http://example.com/2025/07/24/computer/Lua/Lua%E5%9F%BA%E7%A1%80/</link>
-            <pubDate>Thu, 24 Jul 2025 13:51:27 +0800</pubDate>
+            <pubDate>Thu, 24 Jul 2025 15:51:27 +1000</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
             <guid isPermalink="true">http://example.com/2025/07/11/computer/Algorithm/%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</guid>
             <title></title>
             <link>http://example.com/2025/07/11/computer/Algorithm/%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</link>
-            <pubDate>Fri, 11 Jul 2025 16:55:51 +0800</pubDate>
+            <pubDate>Fri, 11 Jul 2025 18:55:51 +1000</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;数组相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组相关&#34;&gt;#&lt;/a&gt; 数组相关&lt;/h3&gt;
 &lt;p&gt;数组并不会有太复杂的题目来考，所以大多只是将想法转换成代码；&lt;br&gt;
 在数组这块会有一些常用的解题方式，如双指针法，滑动窗口 (双指针的一种应用)，前缀和解决时间复杂度问题，即创建一个新的数组用于存储对应下标前面几个元素的和；二分查找等&lt;/p&gt;
@@ -179,7 +179,7 @@ Manifest 文件就像是打包的一个总帐本。因为打包之后的 AssetBu
             <link>http://example.com/2025/06/17/computer/StochasticAlgorithm/lec12%20%E4%B8%93%E5%AE%B6%E3%80%82%E3%80%82/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Tue, 17 Jun 2025 14:03:58 +0800</pubDate>
+            <pubDate>Tue, 17 Jun 2025 16:03:58 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;lecture-9-streaming-and-sketching-ii-内容总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-9-streaming-and-sketching-ii-内容总结&#34;&gt;#&lt;/a&gt; Lecture 9: Streaming and Sketching II - 内容总结&lt;/h1&gt;
 &lt;h2 id=&#34;part1-引入流式算法以及解决方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#part1-引入流式算法以及解决方案&#34;&gt;#&lt;/a&gt; Part1 引入流式算法以及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;课程引入流式算法的挑战&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课程引入流式算法的挑战&#34;&gt;#&lt;/a&gt; 🧩 课程引入：流式算法的挑战&lt;/h3&gt;
@@ -499,7 +499,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/17/computer/StochasticAlgorithm/lec9%20-%20%E5%89%AF%E6%9C%AC/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Tue, 17 Jun 2025 14:03:57 +0800</pubDate>
+            <pubDate>Tue, 17 Jun 2025 16:03:57 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;lecture-9-streaming-and-sketching-ii-内容总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-9-streaming-and-sketching-ii-内容总结&#34;&gt;#&lt;/a&gt; Lecture 9: Streaming and Sketching II - 内容总结&lt;/h1&gt;
 &lt;h2 id=&#34;part1-引入流式算法以及解决方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#part1-引入流式算法以及解决方案&#34;&gt;#&lt;/a&gt; Part1 引入流式算法以及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;课程引入流式算法的挑战&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课程引入流式算法的挑战&#34;&gt;#&lt;/a&gt; 🧩 课程引入：流式算法的挑战&lt;/h3&gt;
@@ -819,7 +819,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/14/computer/StochasticAlgorithm/lec11%20Learning%20and%20testingprobability%20distributions/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Sat, 14 Jun 2025 11:07:44 +0800</pubDate>
+            <pubDate>Sat, 14 Jun 2025 13:07:44 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;这一节主要讲的是，如果我们不知道这个概率，我们要从已有的分布中求出这个概率 P&lt;/p&gt;
 &lt;h3 id=&#34;total-variation-distance&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#total-variation-distance&#34;&gt;#&lt;/a&gt; Total Variation Distance&lt;/h3&gt;
 &lt;p&gt;![[Pasted image 20250617082622.png]]&lt;br&gt;
@@ -832,7 +832,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/14/computer/StochasticAlgorithm/lec9%20%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93%E7%89%88/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Sat, 14 Jun 2025 11:07:43 +0800</pubDate>
+            <pubDate>Sat, 14 Jun 2025 13:07:43 +1000</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
@@ -841,7 +841,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/14/computer/StochasticAlgorithm/lec8%20%E6%B5%81%E5%BC%8F%E7%AE%97%E6%B3%95/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Sat, 14 Jun 2025 11:07:41 +0800</pubDate>
+            <pubDate>Sat, 14 Jun 2025 13:07:41 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;需要解决流式算法的问题，我们有两种思路，一种是乘法近似，一种是加法近似&lt;br&gt;
 ！[[Pasted image 20250614130820.png]]&lt;br&gt;
  接下来介绍第一个问题&lt;/p&gt;
@@ -892,7 +892,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/13/computer/StochasticAlgorithm/%E8%BF%98%E8%A6%81%E5%86%99%E7%9A%84%E9%A2%98%E7%9B%AE/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Fri, 13 Jun 2025 12:02:24 +0800</pubDate>
+            <pubDate>Fri, 13 Jun 2025 14:02:24 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;tut02 08，09&lt;/p&gt;
  ]]></description>
         </item>
@@ -902,7 +902,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/12/computer/StochasticAlgorithm/lec4%20Derandomisation%20%E5%8E%BB%E9%9A%8F%E6%9C%BA%E5%8C%96/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Thu, 12 Jun 2025 15:59:05 +0800</pubDate>
+            <pubDate>Thu, 12 Jun 2025 17:59:05 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;这一节主要是讲，比如有一个 99% 概率得到答案的随机算法，他会有一个 100% 成功的确定的 算法吗？&lt;br&gt;
  有几种办法可以解决&lt;br&gt;
  1 PRNG&lt;br&gt;
@@ -921,7 +921,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/12/computer/StochasticAlgorithm/lec10%20Linear%20Programmingand%20Randomised%20Rounding/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Thu, 12 Jun 2025 15:59:04 +0800</pubDate>
+            <pubDate>Thu, 12 Jun 2025 17:59:04 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;这一节着重讨论了线性规划的内容，并且通过线性规划重新讨论了第 5 节的 min-cut 问题。&lt;br&gt;
 首先讨论了普通的线性规划，然后提出了整数线性规划&lt;br&gt;
 由于有些问题，比如 0-1 背包问题，又或是 min-cut 问题，这些问题的参数并不能为连续的变量，只能是整数。但是由于 ILP (整数线性规划) 是一个 NP-hard 问题，有时候无法在多项式时间内求解，因此我们来讨论将 ILP 放松并界定的方式&lt;/p&gt;
@@ -1050,7 +1050,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/12/computer/StochasticAlgorithm/lec5%20Graph%20algorithms%EF%BC%88%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93%EF%BC%89/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="随机算法" scheme="http://example.com/categories/computer/StochasticAlgorithm/" />
-            <pubDate>Thu, 12 Jun 2025 15:59:03 +0800</pubDate>
+            <pubDate>Thu, 12 Jun 2025 17:59:03 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;引入概念：Global Minimum Cut&lt;br&gt;
  这节课我们需要解决的问题：在一个无向连通图中，我们想把这个图分成两个，要如何切断最少的边的数量完成这个行为&lt;br&gt;
 由于求解这个问题的复杂度较高，并且当我们使用常规算法时，面对粘稠图会非常的无力，所以说，我们可以放大一些范围，牺牲一些准确性来获得更高效的时间复杂度。&lt;/p&gt;
@@ -1074,7 +1074,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/12/computer/ComputationalGeometry/lec7%20Voronoi%20Diagram/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="计算几何" scheme="http://example.com/categories/computer/ComputationalGeometry/" />
-            <pubDate>Thu, 12 Jun 2025 08:07:21 +0800</pubDate>
+            <pubDate>Thu, 12 Jun 2025 10:07:21 +1000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;voronoi-diagram-基础讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#voronoi-diagram-基础讲解&#34;&gt;#&lt;/a&gt; Voronoi Diagram 基础讲解&lt;/h1&gt;
 &lt;h2 id=&#34;什么是-voronoi-diagram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-voronoi-diagram&#34;&gt;#&lt;/a&gt; 什么是 Voronoi Diagram?&lt;/h2&gt;
 &lt;p&gt;给定一个点集 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;{&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mo&gt;…&lt;/mo&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&#34;false&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;P = \{p_1, p_2, \dots, p_n\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;minner&#34;&gt;…&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.151392em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，Voronoi 图是将平面划分为 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 个区域（称为 Voronoi Cells），每个区域对应一个点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p_i&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，使得该区域中任意一点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;q&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;q&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 满足：&lt;/p&gt;
@@ -1624,7 +1624,7 @@ A: 频繁&lt;br&gt;
             <link>http://example.com/2025/06/12/computer/ComputationalGeometry/lec5%20Range%20Searching%201/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="计算几何" scheme="http://example.com/categories/computer/ComputationalGeometry/" />
-            <pubDate>Thu, 12 Jun 2025 08:07:20 +0800</pubDate>
+            <pubDate>Thu, 12 Jun 2025 10:07:20 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;重点:kd-tree 和 range tree&lt;/p&gt;
 &lt;p&gt;首先，可以参考 ass2 的第一题，kd-tree 的绘制和 range-tree 的绘制。&lt;/p&gt;
 &lt;p&gt;其次，我们来一点点深入了解这几个知识点。&lt;/p&gt;
@@ -1731,7 +1731,7 @@ Fractional Cascading&lt;br&gt;
             <link>http://example.com/2025/06/07/computer/ComputationalGeometry/lec4%20Linear%20Programmin(%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93%E7%89%88)/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="计算几何" scheme="http://example.com/categories/computer/ComputationalGeometry/" />
-            <pubDate>Sat, 07 Jun 2025 15:42:59 +0800</pubDate>
+            <pubDate>Sat, 07 Jun 2025 17:42:59 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;首先，讨论了一个现实问题，引入了线性规划相关的知识，即通过一系列的不等式规划出一个区域，然后将目标函数与目标区域的相交点结合，看哪个点最好&lt;/p&gt;
 &lt;h3 id=&#34;增量算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#增量算法&#34;&gt;#&lt;/a&gt; 增量算法&lt;/h3&gt;
 &lt;p&gt;可以首先添加一个简单的且很大的边界，然后将约束条件一次次加入这个区域中，如果最优点 v_i-1 仍然在最新的区域中，那么 v_i=v_i-1，否则重新计算 v_i&lt;br&gt;
@@ -1815,7 +1815,7 @@ Fractional Cascading&lt;br&gt;
             <link>http://example.com/2025/06/06/computer/DataAnalyze/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02/</link>
             <category term="计算机科学" scheme="http://example.com/categories/computer/" />
             <category term="数据分析" scheme="http://example.com/categories/computer/DataAnalyze/" />
-            <pubDate>Fri, 06 Jun 2025 10:25:39 +0800</pubDate>
+            <pubDate>Fri, 06 Jun 2025 12:25:39 +1000</pubDate>
             <description><![CDATA[ &lt;p&gt;lec7 的内容主要在于 区分各种概念，例如机器学习，分类聚类等，然后有几个公式需要记，已经记在 cheatsheet 上了。&lt;/p&gt;
 &lt;p&gt;apriori 算法&lt;br&gt;
 通俗来讲，就是通过所有的频繁的组合都是由单一的频繁项来组成的。比如说，A,B,C,D 四个元素，首先构造一个  &lt;code&gt;min_support&lt;/code&gt; , 然后进行迭代，先剪枝掉元素中 k&amp;lt; &lt;code&gt;min_support&lt;/code&gt;  的元素，再对剩余元素进行排列组合，最终得到频率最高的组合。&lt;/p&gt;
