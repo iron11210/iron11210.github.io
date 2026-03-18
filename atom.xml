@@ -8,7 +8,145 @@
     <author>
       <name>IRON</name>
     </author>
-    <updated>2026-03-17T01:37:24.203Z</updated>
+    <updated>2026-03-17T16:00:00.000Z</updated>
+    <entry>
+        <id>http://example.com/2026/03/18/Tools/Git%E5%92%8CFork%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+        <title>Git以及Fork Gui的使用</title>
+        <link rel="alternate" href="http://example.com/2026/03/18/Tools/Git%E5%92%8CFork%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+        <content type="html">&lt;h2 id=&#34;git以及fork-gui的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git以及fork-gui的使用&#34;&gt;#&lt;/a&gt; Git 以及 Fork Gui 的使用&lt;/h2&gt;
+&lt;p&gt;这是一份给完全没接触过 Git 的同学准备的实操指南。&lt;/p&gt;
+&lt;h3 id=&#34;1-git-是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-git-是什么&#34;&gt;#&lt;/a&gt; 1. Git 是什么？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Git：代码版本管理工具。&lt;/li&gt;
+&lt;li&gt;你可以把它理解成 “代码时光机 + 协作工具”。&lt;/li&gt;
+&lt;li&gt;作用：
+&lt;ul&gt;
+&lt;li&gt;记录每次代码变化（谁改了什么）。&lt;/li&gt;
+&lt;li&gt;出问题时回退到历史版本。&lt;/li&gt;
+&lt;li&gt;多人协作不互相覆盖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-先理解-4-个核心概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-先理解-4-个核心概念&#34;&gt;#&lt;/a&gt; 2. 先理解 4 个核心概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;工作区（Working Directory）：你正在编辑的文件。&lt;/li&gt;
+&lt;li&gt;暂存区（Staging Area）：准备提交的文件清单。&lt;/li&gt;
+&lt;li&gt;本地仓库（Local Repository）：你电脑上的版本历史。&lt;/li&gt;
+&lt;li&gt;远程仓库（Remote Repository）：GitHub/GitLab 上的仓库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个最常见流程：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;改代码 -&amp;gt; git add -&amp;gt; git commit -&amp;gt; git push&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;简单理解就是，修改完代码了需要先在本地提交并保存，然后再决定是否要推送到云端。&lt;/p&gt;
+&lt;h3 id=&#34;3-安装-gitwindows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-安装-gitwindows&#34;&gt;#&lt;/a&gt; 3. 安装 Git（Windows）&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Git 官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4=&#34;&gt;https://git-scm.com/download/win&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;下载并安装，安装时一路默认一般就够了。&lt;/li&gt;
+&lt;li&gt;安装完成后，打开 PowerShell 或 Git Bash，输入：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;看到版本号就说明安装成功。&lt;/p&gt;
+&lt;h3 id=&#34;4-安装fork可视化工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-安装fork可视化工具&#34;&gt;#&lt;/a&gt; 4. 安装 Fork 可视化工具&lt;/h3&gt;
+&lt;h4 id=&#34;41-通过官网安装forkfork-a-fast-and-friendly-git-client-for-mac-and-windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41-通过官网安装forkfork-a-fast-and-friendly-git-client-for-mac-and-windows&#34;&gt;#&lt;/a&gt; 4.1 通过官网，安装 fork：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtZm9yay5jb20v&#34;&gt;Fork - a fast and friendly git client for Mac and Windows&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;42-下载并完成在安装完成后打开可以看到&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42-下载并完成在安装完成后打开可以看到&#34;&gt;#&lt;/a&gt; 4.2 下载并完成，在安装完成后打开，可以看到&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/Snipaste_2026-03-18_10-44-00.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKIDg8Y1jF7_TPCZjLb48lsbHv9ymNZRQ0G8fVxD_mNEFgwlBHuS04jW_COuX6CF-WqG&amp;amp;q-sign-time=1773791494;1773795094&amp;amp;q-key-time=1773791494;1773795094&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=6a91d4741eb3769c9c3d100cd0405e299e476132&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa51c7e68dd6101b2ec2349208301e8893vHIIU1HoWEwcWBCaHFr_BpszcVKOSfNxsxMGVbEycWfeJfx-6OHOFx9OG2cyTjybKELrKCm3Cjk_v9Y_ri1I98_KtrEkWZxkAs27A4ewdXcZFzQvauSC0vO3OXVjTUV-GRFV18SG7N6QGoEHePn-FwLy4tXKY9KACUsfu1LNUUTAqhMXmn0-75Rh7-ZGg8IZW2xvOyJBw8m0YmyRZdPlJxs9OAPrXxIDUkowe9eifytlmEZQOpmTeuNhdtXZJr1f9-zKmNCOeILvHi14ZGkf6w&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;输入自己的 id 和 GitHub 邮箱，选择一个本地的路径作为存储路径&lt;/p&gt;
+&lt;h4 id=&#34;43-初始化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43-初始化&#34;&gt;#&lt;/a&gt; 4.3 初始化&lt;/h4&gt;
+&lt;p&gt;第一次进入 fork 界面后，首先要创建一个本地的 SSHKey&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/ssh.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID7rhFtc293SkFQWYhu1jX8rctmsBZQ0XaHCLyO0QuJd6exxElWu2ymDdxsSvPPOGD&amp;amp;q-sign-time=1773791643;1773795243&amp;amp;q-key-time=1773791643;1773795243&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=3a46dc3ae82ff90b27c88a82ec75514083ffb42b&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa70f6dbc287f187e16f9ab663e07c89d4vHIIU1HoWEwcWBCaHFr_BrhAgcXTRBeNfjCeR7VQrF0hmK_G6Rohzty2fyRQNN64ibiNB-towmlPniQppFLRUiBHW4rI-z20ZE7gsaeKkfAuOd3IcYAbC1VhyaGZxBtezGmTMkAJTKhBTkXuDz8O_-dn-7SVHI9-2SHTBhpR21Xi_I9ymrWtVtkRLI4fmh6t6257g3_ArO2Vq_saatI8ugnD4M-7psBjhtX0d4NH5pV0DvwwT9jmPlRAyG8sAfcpS5xZ15-S-9JODVlpLW8JVQ&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;然后创建一个新的 SSHKey&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/newssh.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKIDKMpN2NBJqKZJShCNPMhCSH0JGtFGGjD1On-UKKf8HgA4mKRLPFWGyyXxNqr4DbKi&amp;amp;q-sign-time=1773791673;1773795273&amp;amp;q-key-time=1773791673;1773795273&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=e0587566dc9d99a1350b88c3f5b7d83c92cb44e7&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYad7b013f2a3560444a0e6c074df5cb351vHIIU1HoWEwcWBCaHFr_BmFbw8xCxqBF0YTP2gBURQH7tFCPh-q8VrhXmEDBgin1rtqE4YELsEUXcpSktuKRqLn1d4RowjuEtsY_NWJWgGRS068Rm2O475IOCaP5RFnvgoM8ehG3sFaXlDQnrfwN87dwd4I0RZXqSEKihvAhgki1ljpH3TF0rz_4VIfgw0_eX0Zm6kopG4iv3IyoukDm3JjOQ8x6cuwVYF6yXHJsx8zm7ryIFTxqAOgX1tPZU5hLhL72Vks9NgOl7C0pz91ueg&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;创建完以后我们可以看到具体的 Key 是多少，复制它，并到 github 的个人界面&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/sshKey.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKIDYTnebjHMQbOhOo7omLw5xoqjpAQFDGPjIxqDvfS_kzQj0YLHwv9Y_-r1uvOL1l4I&amp;amp;q-sign-time=1773791726;1773795326&amp;amp;q-key-time=1773791726;1773795326&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=91147ca448d761d42318191ac9ce6b13c9a8bb08&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYaf7b009163ff5aabba802d9f83feb491fvHIIU1HoWEwcWBCaHFr_Bgz26SZcFlq1z1PZgAURIFMpgBg_La_1tpNhJr5pk3-eXTWksSpu7q_hN4LurVAjX5GnNeR8IirCjlpyY-OvdFkCdpUSh23saQq51YVjH_7yO_GxUCu6-HKTPcm2Qywag_00-LDFfaOTXsm-45DfnV5shRirHtZq-VtVwVd8vUGIKS_U0rVNtr9m6xeOaP-VG0TC68iNy3OG0RYL1reH71KAgAudpO0z6hGMtKN4NxpHdKtqy1oLUrBkmAAjwItIKA&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/githubssh.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID2bAlszWbFAGXV8Cvp6lkEzeSlf0nSQHMofVL9rs45CRUp45G-uA2b3ze2_90GkjQ&amp;amp;q-sign-time=1773791754;1773795354&amp;amp;q-key-time=1773791754;1773795354&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=7d11059dd96d836240152e68e49d5ed9fb9fc451&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa188cf829fc5db7403c1f232031f81b5cvHIIU1HoWEwcWBCaHFr_Bm48vphVHMNCZVwed_5sXcGIj3FQbkXHXY_7xqc9Ko4ZH0MFDRfzwVAMQzlMCTDYzNUhN1WI0I35f14Zgay8uRi31BofFI3OAJk-X_bd7G-I4ukAYqmwRCM60HLOFkS92igxnGie6OIwlAOd4pKeep200VqUd2HaO1TTE_qjJprLh17lW9CtECE6Gmi7JUdP3wxgYR9krFxdYsBgwok0lHGNqC6OQmZuTRNJ8kOpEtw21HdZj88wNDk12ozr9ED8Wg&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;h4 id=&#34;44-克隆项目并进入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#44-克隆项目并进入&#34;&gt;#&lt;/a&gt; 4.4 克隆项目并进入&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;首先去 GitHub 复制 SSH 的链接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/githubClone.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID3yOSPiJtZKCa_xCqHUICnD01UYL2mtbBdHPAFrfTxwd4igLMZrA_IkNhUTQ7beyE&amp;amp;q-sign-time=1773792759;1773796359&amp;amp;q-key-time=1773792759;1773796359&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=13ede0d6962697433c679a9bffa8c1d027ec0776&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa84b44ccbe23f2b4db2155e401ec833c0vHIIU1HoWEwcWBCaHFr_BmhKDVWg9kS8oWntibonVMqe_66M86ZX1GKxO2IjElf7Dca_STa-hFzoNgWS1x6WGXurSqhYU3JSmsHxYzBQCDVBdjfmoQA98Be1yDj11OS6gXtfQHFf6SBRHFfZrfsLbF8KImDBMoy7MZCX2MaCqHQUV8whQDg6Rp2uPLR4u1HMCYtzpJOsJ-AMLaQM352h2StZ3uPVU_AoKzCPwN28l5Y5Sg5ZJ6odpfeb2jFJQhcQFZbg-idW0sdJ34KepUbNkQ&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;然后在本地克隆&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/Clone.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID6rCZmqhuMHEpRAmu75LVeC8Zar0A2tdNoONm9hVrGwnaBjytXRqnkkUGEUoqVbSK&amp;amp;q-sign-time=1773792798;1773796398&amp;amp;q-key-time=1773792798;1773796398&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=10077097fa21309fe97bacfc629ae291d3f859a1&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa2e84340f79b8cf66ecb33bfc2643c4b8vHIIU1HoWEwcWBCaHFr_BlpQJhpc1QyA7mlV_799emrh8a-Jqh-D_hSYe8EqCF8F5IDuK2W8mFl2OcZpZNGNKsL4weqbtsugjuJamCTnDbvF6oUgRan86iKeQ5WChZK59z_TfFp_Gbegfga5NRoV1AEL0R97R2W06Pg0NTZ0VpelytYDNEVU6qrgrQQgGM4bKW5nynnfS-EeJLN-H1VaFpyMi36d6db6ldnjg6vFpsQuKKzjvN_wFAFAZrZP80plHfv_wLSh5veiP06svjUlGg&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-界面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-界面&#34;&gt;#&lt;/a&gt; 5. 界面&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/Gui.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID0JblZt90wczdpEe1yZHnWqbtvglh4foGiA9G0Q1ShhamcFgd8DZJSh1Q4Gylv44f&amp;amp;q-sign-time=1773792836;1773796436&amp;amp;q-key-time=1773792836;1773796436&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=ca90cfbb6623e470ac09350fc8b3245eed8b7825&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa3bf1cfe454d7ddb270e869aebfe7e300vHIIU1HoWEwcWBCaHFr_BiZNc1cMDg2tvmqjE_rTyPSpCSLjC5CIeSd2DU1fapb5zNtuMuBYqmfZwAThkArCsuY0S3bI7-sWY-NQ5aHQ3PkCJZTmCF82kML5NYidEqqlg-zDQ9vOXa5fSOAblU_Xsw6rD7FOgfi667nkhbcWI6em1SB4y22AkcjH8Bd6-rFEcKQGOOVtWRokW-zyUEdFwedZ5aVtxEzanCeWO3s868XU-4BnMfGQO0KR05Kq9wGG_DxyRxo3-CbvNICbrF3PjA&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/localChange.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID3iwC0BlfdxhbrXQY7LHk6FzfqqKoVNPEcDQkJ94bFQrowWkes7HaAzQfQ6RCSvS0&amp;amp;q-sign-time=1773792863;1773796463&amp;amp;q-key-time=1773792863;1773796463&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=e2ba5157cf88a6776b3eee0c71be67422554848c&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYa7d406e8a4943fead34c27f87b5d22cc7vHIIU1HoWEwcWBCaHFr_BqmSYb4Om8n7DIuf6lmT7ULd7E6ZWP1BvlaLuTW3vjPx-SDWDARN1DK2CjC-txyo8FkydHhVGpCmgD8ciPS-qsSzzze32hAD6fxhMTW2vWuHX8tIk1rTfWv9F7TYgSiixKOrhXljsQFPqKHzDexbw7p4jx5Wsi-eQuRbnPl-8hVXcILtAxwnEC4J-F7Ss3aL1fnVqUuEyT0K_OGAQo5DQ88Q1sMVhhkabVK1PmRAXw8A_4cxZnXJCawHgPFzmdFp0Q&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;左上角区域的作用分别是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fetch&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将远程代码拉到本地，但是暂时不修改本地的代码，即可以看看修改了什么再决定是否要拉取&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Pull&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将远程代码拉取并覆盖到本地&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Push&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将本地的代码 Push 到 GitHub 远程仓库&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Stash&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将本地代码先暂存，可以理解为先把代码放到回收站里，需要的时候再拿出来&lt;/p&gt;
+&lt;p&gt;从这图中我们可以梳理一下开发的流程。&lt;/p&gt;
+&lt;p&gt;由于当 LocalChange 中有内容时无法进行 Pull 操作，所以我们在开发前需要先进行 Fetch 和 Pull 操作，在解决完冲突后，再进行开发。&lt;/p&gt;
+&lt;p&gt;当开发完成后，我们需要对 Unstaged 的内容进行审查，没有问题以后将其 stage，之后这些更改过的文件就会进入 Staged 区，这个时候我们需要在右下角区域写清楚描述，将其 commit。&lt;/p&gt;
+&lt;p&gt;此时代码已经提交到本地的仓库了，这个时候再点击左上角的 Push 可以将本地仓库的内容提交到 GitHub 远程仓库。&lt;/p&gt;
+&lt;h3 id=&#34;6-分支是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-分支是什么&#34;&gt;#&lt;/a&gt; 6. 分支是什么&lt;/h3&gt;
+&lt;p&gt;分支可以理解成 “平行开发线”，避免你直接在主分支乱改。由于每个人写的部分不一样，所以需要建立自己的分支防止对其他人产生影响。在开发完成后再将分支合并。&lt;/p&gt;
+&lt;h4 id=&#34;61-创建并切换到新分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#61-创建并切换到新分支&#34;&gt;#&lt;/a&gt; 6.1 创建并切换到新分支&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/newBranch.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKIDoj9nAxiOvZ5QOmkDYlosDtovpWK40Pxhvk5UrClKiXFTHhc_V82yHFXmP_8f7t_N&amp;amp;q-sign-time=1773793236;1773796836&amp;amp;q-key-time=1773793236;1773796836&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=362e9cdfbab553db555687c0b4e02d8d2d2d2060&amp;amp;x-cos-security-token=PLTkwx7stAscEzt92luChYaqX0bktNYae48c8d79d42330529abf0a19e3f19f49vHIIU1HoWEwcWBCaHFr_BgtNrc9ZsybCIQFuRYdJ0CxSkiM7SrVRARCUFkIKzVMal6-vGLE2MbC8NaUs3h2KVpgV1I1_DbbfDZRW56xw261Rytp8qMSBbm7j212ME04-g0DP25EW00_qDt1YJ_0EY0mwF0fQ5tYn45qv2aQXg0IAwzHBrMJmU5WgSnACkla_vBNyjOj3nFn9mXJV5SihLXPPwfrgwrebtyOuxQ_xkPwzBvThtRhwG-d1nVGgayPOPjCchHfk6kHMj1f9sUoWDQ&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;h4 id=&#34;62-切换分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#62-切换分支&#34;&gt;#&lt;/a&gt; 6.2 切换分支&lt;/h4&gt;
+&lt;p&gt;在界面中双击某个分支即可切换过去。&lt;/p&gt;
+&lt;h4 id=&#34;63-合并分支在-main-上执行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#63-合并分支在-main-上执行&#34;&gt;#&lt;/a&gt; 6.3 合并分支（在 main 上执行）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://blog-1321157486.cos.ap-nanjing.myqcloud.com/Tools/%E7%95%8C%E9%9D%A2/mergeBranch.png?q-sign-algorithm=sha1&amp;amp;q-ak=AKID9x1xpvFClg-jtp6yAtOe7F9kGi8UNXIsjtqvnR9mPzINqbSx03BTncXAyfcabz-X&amp;amp;q-sign-time=1773793286;1773796886&amp;amp;q-key-time=1773793286;1773796886&amp;amp;q-header-list=host&amp;amp;q-url-param-list=&amp;amp;q-signature=5b0cdaffb1ca8c223f8ae27e31089d2ff1149984&amp;amp;x-cos-security-token=2oE4Y68z1hYe3o3ey30XZjJjQpCHBJza1d3c12d7202179d10f6d5ca423083959G8uKO3H90K0oduX6WX85MLEytJbwKsbJkgoj5_GclBlhJ9AAdRQUK3H20_lFW87Gc_TKI5VkISm7EcYdL3FN7rndC62zJrl5KEpgG57HiAMLtfX7f36Udd_q3WmVp3JAWIJfFBRjNjioZWA-7Q6aA_aiSMZ8qC14iNEeQ9oPM4pScu0mLEJZt7y0crtVsNa5CVwcb_DKsmPK9_1vA51JJVlCJ9znsG0_VMjgkvFp_88xxuXuiDmLxBQCHdPH_rkg55Ey99J4bL52GTC8b_TTLg&amp;amp;&#34; alt&gt;&lt;/p&gt;
+&lt;h3 id=&#34;7-冲突怎么解决&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-冲突怎么解决&#34;&gt;#&lt;/a&gt; 7. 冲突怎么解决&lt;/h3&gt;
+&lt;p&gt;冲突出现时，Git 会提示某些文件冲突。&lt;/p&gt;
+&lt;p&gt;处理步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开冲突文件，会看到类似标记：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;你的代码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;=======&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;别人的代码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; 分支名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;手动保留正确内容，删除这些标记。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;8-提交信息怎么写&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-提交信息怎么写&#34;&gt;#&lt;/a&gt; 8. 提交信息怎么写&lt;/h3&gt;
+&lt;p&gt;推荐格式：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;类型: 简短说明&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;常见类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;feat: 新功能&lt;/li&gt;
+&lt;li&gt;fix: 修复 bug&lt;/li&gt;
+&lt;li&gt;docs: 文档更新&lt;/li&gt;
+&lt;li&gt;refactor: 重构（不改功能）&lt;/li&gt;
+&lt;li&gt;style: 代码格式调整&lt;/li&gt;
+&lt;li&gt;test: 测试相关&lt;/li&gt;
+&lt;li&gt;chore: 构建 / 工具 / 杂项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feat: 新增风险评分卡片&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fix: 修复收益率计算为 NaN 的问题&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docs: 补充 README 启动步骤&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9-常见报错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-常见报错&#34;&gt;#&lt;/a&gt; 9. 常见报错&lt;/h3&gt;
+&lt;h3 id=&#34;91-fatal-not-a-git-repository&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#91-fatal-not-a-git-repository&#34;&gt;#&lt;/a&gt; 9.1  &lt;code&gt;fatal: not a git repository&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;你不在仓库目录里。先  &lt;code&gt;cd&lt;/code&gt;  到项目根目录再执行 Git 命令。&lt;/p&gt;
+&lt;h3 id=&#34;92-nothing-to-commit-working-tree-clean&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#92-nothing-to-commit-working-tree-clean&#34;&gt;#&lt;/a&gt; 9.2  &lt;code&gt;nothing to commit, working tree clean&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;没有可提交的改动，说明你当前文件和上一次提交一致。&lt;/p&gt;
+&lt;h3 id=&#34;93-rejected-或-non-fast-forward&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#93-rejected-或-non-fast-forward&#34;&gt;#&lt;/a&gt; 9.3  &lt;code&gt;rejected&lt;/code&gt;  或  &lt;code&gt;non-fast-forward&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;远程比你新，先拉取再推送：&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git pull --rebase&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;94-permission-denied推送权限问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#94-permission-denied推送权限问题&#34;&gt;#&lt;/a&gt; 9.4  &lt;code&gt;Permission denied&lt;/code&gt; （推送权限问题）&lt;/h3&gt;
+&lt;p&gt;检查：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仓库地址是否正确。&lt;/li&gt;
+&lt;li&gt;是否登录了正确账号。&lt;/li&gt;
+&lt;li&gt;SSH key /token 是否配置好。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="工具使用" scheme="http://example.com/categories/Tools/" />
+        <updated>2026-03-17T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2026/03/17/%E4%BD%9C%E5%93%81%E9%9B%86/</id>
         <title>作品集</title>
@@ -45,51 +183,6 @@ height: 100%; left: 0; top: 0;&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;
 &lt;/p&gt;
 </content>
         <updated>2026-03-17T01:37:24.203Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/</id>
-        <title></title>
-        <link rel="alternate" href="http://example.com/2025/12/07/game-engine/unity/interview/%E6%AC%A2%E5%8A%A8%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2(hr%E9%9D%A2)/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;介绍一下自己&lt;/li&gt;
-&lt;li&gt;这几个项目你是怎么完成的&lt;/li&gt;
-&lt;li&gt;平时如何学习的，在学校是课程学的多还是自己学的多&lt;/li&gt;
-&lt;li&gt;优点 / 缺点&lt;/li&gt;
-&lt;li&gt;在团队中的作用&lt;/li&gt;
-&lt;li&gt;你觉得你和我们公司哪些比较契合，有什么优势&lt;/li&gt;
-&lt;li&gt;你如何看待 AI 会替代程序员这个说法&lt;/li&gt;
-&lt;li&gt;目前有没有 offer，在哪里&lt;/li&gt;
-&lt;li&gt;为什么考虑我们公司，我们公司和其他公司同时拥有 offer 的话你会选择哪里&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2025-12-06T13:12:19.117Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/</id>
-        <title></title>
-        <link rel="alternate" href="http://example.com/2025/12/07/game-engine/unity/interview/%E5%90%88%E8%82%A5%E5%B8%B8%E6%98%A5%E8%97%A4/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;你觉得自己是一个怎么样的人？优点？缺点？&lt;/li&gt;
-&lt;li&gt;你对未来的规划？&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2025-12-06T13:11:36.231Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</id>
-        <title></title>
-        <link rel="alternate" href="http://example.com/2025/12/07/game-engine/unity/interview/%E7%8E%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;项目是怎么做的，团队协作还是？如何分工，你和另一个程序是如何合作的？你负责什么部分？&lt;/li&gt;
-&lt;li&gt;数学怎么样，还可以，来做一道题吧&lt;/li&gt;
-&lt;li&gt;给我讲讲如何判断一个矩形和一个圆的关系，到代码层面呢？算法如何实现？&lt;/li&gt;
-&lt;li&gt;c# 的 list 的查找事件复杂度？为什么？他的数据结构？&lt;/li&gt;
-&lt;li&gt;在一个数组中删除元素的时间复杂度？&lt;/li&gt;
-&lt;li&gt;投球同色消游戏，如何设计数据结构？如何获取暴露在外面的元素？&lt;/li&gt;
-&lt;li&gt;敌人的扇形攻击范围，如何判定是否在攻击范围内？&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2025-12-06T13:08:57.797Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2025/11/12/game-engine/unity/AssetBundle/Builder%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E4%B9%8B%E4%B8%80%20Collect/</id>
@@ -1842,5 +1935,219 @@ Fractional Cascading&lt;br&gt;
         <category term="计算机科学" scheme="http://example.com/categories/computer/" />
         <category term="计算几何" scheme="http://example.com/categories/computer/ComputationalGeometry/" />
         <updated>2025-06-07T07:42:59.066Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2025/06/06/computer/DataAnalyze/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02/</id>
+        <title>期末复习2</title>
+        <link rel="alternate" href="http://example.com/2025/06/06/computer/DataAnalyze/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02/"/>
+        <content type="html">&lt;p&gt;lec7 的内容主要在于 区分各种概念，例如机器学习，分类聚类等，然后有几个公式需要记，已经记在 cheatsheet 上了。&lt;/p&gt;
+&lt;p&gt;apriori 算法&lt;br&gt;
+通俗来讲，就是通过所有的频繁的组合都是由单一的频繁项来组成的。比如说，A,B,C,D 四个元素，首先构造一个  &lt;code&gt;min_support&lt;/code&gt; , 然后进行迭代，先剪枝掉元素中 k&amp;lt; &lt;code&gt;min_support&lt;/code&gt;  的元素，再对剩余元素进行排列组合，最终得到频率最高的组合。&lt;/p&gt;
+&lt;p&gt;Rule Generation 可以说是枚举法，对所有可能的组合都进行枚举，将组合的所有非空真子集列出来，并将这些候选进行区分。&lt;br&gt;
+Efficient Rule Generation 在前者基础上，由于&lt;br&gt;
+ c (ABC→D)≥c (AB→CD)≥c (A→BCD)，所以当我们直到第一个不符合的时候，后续的也不必列出了，因此大大降低了无效筛选&lt;/p&gt;
+&lt;p&gt;lec8&lt;/p&gt;
+&lt;p&gt;k-means 算法&lt;br&gt;
+ &lt;figure class=&#34;highlight c++&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;: Select K points as the initial centroids.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;: repeat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;:     Form K clusters by assigning all points to the closest centroid.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;:     Recompute the centroid of each cluster.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;: until the centroids don’t change&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+ 就是，设置 k 个中心点，然后将这一些点分成 k 个聚类，然后重新分组，直到收敛&lt;br&gt;
+重新计算质心的过程就是计算每个点和其他点的距离，然后选距离和最小的一个点&lt;/p&gt;
+&lt;p&gt;To get SSE, we square these errors and sum them. &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;S&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;S&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;E&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∈&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;d&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{SSE} = \sum_{i=1}^{K} \sum_{x \in C_i} \mathrm{dist}^2(m_i, x)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathrm&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord mathrm&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord mathrm&#34;&gt;E&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.381041em;vertical-align:-0.39981em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.981231em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.29971000000000003em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.17862099999999992em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;∈&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.3280857142857143em;&#34;&gt;&lt;span style=&#34;top:-2.357em;margin-left:-0.07153em;margin-right:0.07142857142857144em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.5em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.143em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.39981em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathrm&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathrm&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathrm&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathrm&#34;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8984479999999999em;&#34;&gt;&lt;span style=&#34;top:-3.1473400000000002em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cluster 1: [2, 4] with centroid at 3 Squared error for each cluster:  &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;SE1&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{SE1} = (2 - 3)^2 + (4 - 3)^2 = 1 + 1 = 2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;SE1&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.72777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+        <category term="数据分析" scheme="http://example.com/categories/computer/DataAnalyze/" />
+        <updated>2025-06-06T02:25:39.106Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2025/06/03/computer/ComputationalGeometry/lec3%20Convex%20hulls%20and%20the%20sweepline%20technique/</id>
+        <title>lec3 Convex hulls and the sweepline technique</title>
+        <link rel="alternate" href="http://example.com/2025/06/03/computer/ComputationalGeometry/lec3%20Convex%20hulls%20and%20the%20sweepline%20technique/"/>
+        <content type="html">&lt;p&gt;lec2 中学习的是如何把一个多边形切割开来；而这节课学习的就是，如何把一堆点给包起来&lt;br&gt;
+就像你在地上撒了一把钉子，然后用一根橡皮筋把它们围起来，拉紧之后那个形状就是 “凸包”。&lt;/p&gt;
+&lt;p&gt;所以，构造凸包的这个过程，我们还是从暴力解法开始&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;朴素暴力解法&lt;br&gt;
+我们可以假定一个结论：将点集 S 中的所有点遍历一遍，然后将这些三角形中包住的点都删除；最后剩余的这些没有被包围的点，一定是凸包的顶点。(作为三角形顶点或位于三角形边上的点不被删除)&lt;br&gt;
+ 那么我们就可以&lt;br&gt;
+ #算法步骤（CH1）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遍历 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;S&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 中所有可能的三元组 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x, y, z)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.04398em;&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;：一共 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo fence=&#34;true&#34;&gt;(&lt;/mo&gt;&lt;mfrac linethickness=&#34;0px&#34;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo fence=&#34;true&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\binom{n}{3} = O(n^3)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.20001em;vertical-align:-0.35001em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen delimcenter&#34; style=&#34;top:0em;&#34;&gt;&lt;span class=&#34;delimsizing size1&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7453919999999999em;&#34;&gt;&lt;span style=&#34;top:-2.3550000000000004em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.144em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.345em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose delimcenter&#34; style=&#34;top:0em;&#34;&gt;&lt;span class=&#34;delimsizing size1&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 种组合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对每个组合 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x,y,z)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.04398em;&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，遍历点集中每个点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;q&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;q&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;q&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;q&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 是否落在三角形 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x,y,z)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.04398em;&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 内部。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果是，就把 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;q&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;q&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 从 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;S&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 中删除。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后剩下的点就是 CH 顶点，把它们按极角排序后连接成凸包。&lt;br&gt;
+总时间复杂度：&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(n^3 \cdot n) = O(n^4)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;接下来，我们可以对这个算法进行一定的优化&lt;br&gt;
+ 2. 优化算法&lt;br&gt;
+我们从另一个角度考虑，S 中的所有点，必然位于凸包的边 xy-&amp;gt; 有向直线的右侧，故我们不需要对三维的所有点进行遍历，只需要对二维的点进行遍历即可，然后判断是否其余所有点都位于他们的右侧&lt;br&gt;
+算法步骤（CH2）解释：&lt;br&gt;
+3. &lt;strong&gt;遍历所有有序点对 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x, y)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;（注意是有序的）&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;假设该边合法&lt;/strong&gt;（valid ← true）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对其它点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;z&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.04398em;&#34;&gt;z&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 遍历判断&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;z&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.04398em;&#34;&gt;z&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 是否在直线 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;xy&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的左侧（说明不合法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;如果发现一个点在左侧，就将 valid 设置为 false&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;最后，如果 valid 仍为 true&lt;/strong&gt;，说明 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;xy&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 是 CH 的边之一&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;加入这条边到 CH 边集&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;所有边加入完毕后，排序构造完整凸包&lt;/strong&gt;&lt;br&gt;
+总时间复杂度：&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(n^2 \cdot n) = O(n^3)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;接下来，看看实际当中用的比较多的三种优化算法。&lt;/p&gt;
+&lt;p&gt;在讲算法之前，老师首先对前面的判断进行了补充：如何判断一个点位于线的左边还是右边&lt;br&gt;
+通过叉积，然后根据最后值的正负来判断点位线的哪一边&lt;br&gt;
+这边老师带过了一个算法：Graham Scan&lt;br&gt;
+ 想象你在给钉子围上橡皮筋：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;从最左边的点开始；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你想找到 “下一个最外面的点”；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;怎么找？转一圈，看哪个点相对现在这个点最靠外（最逆时针）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一直这样找下去，直到绕一圈回到起点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;ch凸包的三种构造算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ch凸包的三种构造算法&#34;&gt;#&lt;/a&gt; ch (凸包) 的三种构造算法&lt;/h2&gt;
+&lt;h3 id=&#34;gift-wrapping礼物包装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#gift-wrapping礼物包装&#34;&gt;#&lt;/a&gt; Gift Wrapping（礼物包装）&lt;/h3&gt;
+&lt;p&gt;通俗来理解可以说：&lt;br&gt;
+想象你在给钉子围上橡皮筋：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;从最左边的点开始；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你想找到 “下一个最外面的点”；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;怎么找？转一圈，看哪个点相对现在这个点最靠外（最逆时针）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一直这样找下去，直到绕一圈回到起点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实际上的过程就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;你从左下角开始；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你看着所有点，假装你有一个 “激光扫描器”；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每次 “顺着边扫一圈”，找到第一个 “最外边” 的点（就是逆时针最远的点）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把这条边加入凸包；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后从这个新点再开始下一轮扫描。&lt;br&gt;
+你站在当前点 A，看到两个候选点 B 和 C：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;谁更逆时针？就是谁形成的角度更大；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用叉积公式判断：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;cross&lt;/mtext&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{cross}(A, B, C) = (B - A) \times (C - A)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;cross&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;×&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 cross 值为正，说明 C 比 B 更逆时针 ⇒ C 更好！&lt;br&gt;
+所以，就是一个从起点开始，转着找下一个点 -&amp;gt; 再以下一个点为起点，找下一个点的过程，直到找到所有的点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么，有优化的空间嘛？&lt;br&gt;
+有的！&lt;br&gt;
+可以不用每次都遍历所有的点以找下一个点 q，而是可以通过检查角度来判断，如果新的角度大于旧的最大角，那么这个点就是新的点。&lt;/p&gt;
+&lt;p&gt;所以，他们的区别在于，暴力解法需要对所有的点做叉积比较来判断是否都在左边，而优化后只需要比较角度就可以了&lt;br&gt;
+一个是&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(n^2)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的时间复杂度，因为需要嵌套；而后者为 O (n) 的复杂度，只需要线性即可。&lt;/p&gt;
+&lt;h3 id=&#34;quick-hall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-hall&#34;&gt;#&lt;/a&gt; quick hall&lt;/h3&gt;
+&lt;p&gt;Divide-and-Conquer approach 分治&lt;br&gt;
+这个算法可以理解成&lt;br&gt;
+想象你在玩 “谁离得最远” 的游戏：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;找出最左点 AAA 和最右点 BBB，画出一条直线 ABABAB；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把所有点分成两边（上方、下方）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找出 “离直线最远” 的那个点 CCC，它肯定是边界上的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把 C 连上 A 和 B，形成三角形；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再看哪些点在这个三角形 “外面”，对它们重复上面的步骤；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直到所有点都在边界三角形里为止，完工！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;![[Pasted image 20250603145633.png]]&lt;/p&gt;
+&lt;p&gt;时间复杂度：&lt;br&gt;
+最好情况：每次都能把点均匀切开&lt;br&gt;
+即二分查找复杂度。O (nlogn)&lt;/p&gt;
+&lt;p&gt;最差情况：所有点都在边上，如五角星形的分布&lt;br&gt;
+&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(n^2)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;扫描线算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扫描线算法&#34;&gt;#&lt;/a&gt; 扫描线算法&lt;/h3&gt;
+&lt;p&gt;将这些点以 x 轴从小到大排列，并且分为下凸壳和上凸壳，然后最后再将他们拼起来。&lt;br&gt;
+在凸包上行走时观察是否右拐，如果左拐了就把这个点删了。如果右拐就继续。&lt;br&gt;
+伪代码：&lt;br&gt;
+&lt;figure class=&#34;highlight c#&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;1.&lt;/span&gt;  Sort the points left to right&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;2.&lt;/span&gt;  Initialize L_upper &lt;span class=&#34;keyword&#34;&gt;with&lt;/span&gt; first two points&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;3.&lt;/span&gt;  For i = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt; to n:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;4.&lt;/span&gt;     Add p_i to L_upper&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;5.&lt;/span&gt;     While L_upper has a left turn:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;6.&lt;/span&gt;         Delete the middle point&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;7.&lt;/span&gt;  同理构造 L_lower&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;8.&lt;/span&gt;  最后将 L_upper 和 L_lower 合并&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+ 因为每个点只会加入和删除一次，所以时间复杂度为 O (nlogn)&lt;/p&gt;
+&lt;p&gt;然后就是计算凸包的下界，我们可以低于 nlogn 吗？&lt;br&gt;
+用数学归纳法，将凸包转化为排序问题，而排序算法的下界为 nlogn，所以凸包不可能低于 nlogn&lt;/p&gt;
+&lt;h3 id=&#34;chen-算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chen-算法&#34;&gt;#&lt;/a&gt; Chen 算法&lt;/h3&gt;
+&lt;p&gt;Chan 算法就像一个聪明的厨师：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Graham 是大锅炒（适合处理很多点）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gift Wrapping 是慢工细活（适合边界点很少）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chan 想了一个办法：&lt;strong&gt;先猜边界点有多少（比如 h=4），然后只挑这些来 Gift Wrapping，结果超快！&lt;/strong&gt;&lt;br&gt;
+相当于是 graham 和 gift wrapping 的结合，将所有点分为 n/h 组，然后对每一组使用 graham 算法，得到每一组的局部凸包，然后对这些局部凸包使用 gift wrapping，所以最终的复杂度为 nlogh&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机科学" scheme="http://example.com/categories/computer/" />
+        <category term="计算几何" scheme="http://example.com/categories/computer/ComputationalGeometry/" />
+        <updated>2025-06-03T01:27:41.856Z</updated>
     </entry>
 </feed>
