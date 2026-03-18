@@ -129,14 +129,14 @@
 &lt;li&gt;&lt;code&gt;docs: 补充 README 启动步骤&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;9-常见报错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-常见报错&#34;&gt;#&lt;/a&gt; 9. 常见报错&lt;/h3&gt;
-&lt;h3 id=&#34;91-fatal-not-a-git-repository&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#91-fatal-not-a-git-repository&#34;&gt;#&lt;/a&gt; 9.1  &lt;code&gt;fatal: not a git repository&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;91-fatal-not-a-git-repository&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#91-fatal-not-a-git-repository&#34;&gt;#&lt;/a&gt; 9.1  &lt;code&gt;fatal: not a git repository&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;你不在仓库目录里。先  &lt;code&gt;cd&lt;/code&gt;  到项目根目录再执行 Git 命令。&lt;/p&gt;
-&lt;h3 id=&#34;92-nothing-to-commit-working-tree-clean&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#92-nothing-to-commit-working-tree-clean&#34;&gt;#&lt;/a&gt; 9.2  &lt;code&gt;nothing to commit, working tree clean&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;92-nothing-to-commit-working-tree-clean&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#92-nothing-to-commit-working-tree-clean&#34;&gt;#&lt;/a&gt; 9.2  &lt;code&gt;nothing to commit, working tree clean&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;没有可提交的改动，说明你当前文件和上一次提交一致。&lt;/p&gt;
-&lt;h3 id=&#34;93-rejected-或-non-fast-forward&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#93-rejected-或-non-fast-forward&#34;&gt;#&lt;/a&gt; 9.3  &lt;code&gt;rejected&lt;/code&gt;  或  &lt;code&gt;non-fast-forward&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;93-rejected-或-non-fast-forward&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#93-rejected-或-non-fast-forward&#34;&gt;#&lt;/a&gt; 9.3  &lt;code&gt;rejected&lt;/code&gt;  或  &lt;code&gt;non-fast-forward&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;远程比你新，先拉取再推送：&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git pull --rebase&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;94-permission-denied推送权限问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#94-permission-denied推送权限问题&#34;&gt;#&lt;/a&gt; 9.4  &lt;code&gt;Permission denied&lt;/code&gt; （推送权限问题）&lt;/h3&gt;
+&lt;h4 id=&#34;94-permission-denied推送权限问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#94-permission-denied推送权限问题&#34;&gt;#&lt;/a&gt; 9.4  &lt;code&gt;Permission denied&lt;/code&gt; （推送权限问题）&lt;/h4&gt;
 &lt;p&gt;检查：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;仓库地址是否正确。&lt;/li&gt;
